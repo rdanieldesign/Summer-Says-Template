@@ -20,12 +20,13 @@
 
 }
 
-#social-widget {
-	float: right;
+.social-widget {
+	position:absolute;
+	left: 68%;
 	width: 32%;
 	padding-top: 32%;
 	background-color: green;
-	margin-left: 2%;
+ 	margin-bottom: 2%;
 }
 
 .container {
@@ -39,18 +40,23 @@
  	margin: 0 auto;
  	padding: 0;
  	text-align: justify;
+ 	position: relative;
  }
 
  .post {
  	width: 32%;
  	display: inline-block;
- 	margin-bottom: 1.5%;
+ 	margin-bottom: 2%;
  	background-color: blue;
  	background-size: 100%;
 
  	img {
  		width: 100%;
  	}
+ }
+
+ .gutter-sizer {
+ 	width: 2%;
  }
  
  #content:after {

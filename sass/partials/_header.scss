@@ -1,0 +1,37 @@
+header {
+	width: 100%;
+	padding-top: 33%;
+	background-color: red;
+	background: url("../img/5.jpg") no-repeat;
+    background-size: 100%;
+
+
+}
+
+nav {
+	width: 100%;
+	border-bottom: 2px solid black;
+	padding: 20px 0 0 0;
+	margin: 0 0 40px 0;
+
+
+	ul {
+		width: 90%;
+		margin: 0 auto;
+		text-align: justify;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+		line-height: 0.1em;
+	}
+
+	ul:after {
+	    content: '';
+	    display: inline-block;
+	    width: 100%;
+	}
+	
+}
+

@@ -1,0 +1,1 @@
+var container=document.querySelector("#content"),msnry=new Masonry(container,{columnWidth:".post",itemSelector:".post",stamp:".stamp",containerStyle:null});

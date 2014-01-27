@@ -1,0 +1,60 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "partials/_main.scss";
+@import "partials/_normalize.scss";
+@import "partials/_header.scss";
+
+
+* {
+	border: 1px black solid;
+}
+
+#wrapper {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+
+}
+
+#social-widget {
+	float: right;
+	width: 32%;
+	padding-top: 32%;
+	background-color: green;
+	margin-left: 2%;
+}
+
+.container {
+	width: 100%;
+}
+
+
+
+ #content {
+ 	width: 100%;
+ 	margin: 0 auto;
+ 	padding: 0;
+ 	text-align: justify;
+ }
+
+ .post {
+ 	width: 32%;
+ 	display: inline-block;
+ 	margin-bottom: 1.5%;
+ 	background-color: blue;
+ 	background-size: 100%;
+
+ 	img {
+ 		width: 100%;
+ 	}
+ }
+ 
+ #content:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}

@@ -1026,6 +1026,7 @@ body {
   background-color: #f6f6f6;
   background-size: 100%;
   border-radius: 3px;
+  /* TEXT LINK UNDER COPY OPTION */
 }
 /* line 52, ../sass/screen.scss */
 .post img {
@@ -1052,7 +1053,7 @@ body {
   position: relative;
   top: -1em;
 }
-/* line 76, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .post a {
   font-family: "Montserrat", Helvetica, sans-serif;
   font-size: .8em;
@@ -1063,22 +1064,29 @@ body {
   position: relative;
   top: -2em;
 }
-/* line 87, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .post a:hover {
   color: #9e760d;
 }
 
-/* line 92, ../sass/screen.scss */
-.post:hover img {
-  opacity: 0.1;
+/* line 93, ../sass/screen.scss */
+.post:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 3px #bcbec0;
+  -moz-box-shadow: inset 0px 0px 0px 3px #bcbec0;
+  box-shadow: inset 0px 0px 0px 3px #bcbec0;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
+.post:hover img {
+  opacity: 0;
+}
+
+/* line 103, ../sass/screen.scss */
 .post:hover article {
   display: block;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .gutter-sizer {
   width: 2%;
 }

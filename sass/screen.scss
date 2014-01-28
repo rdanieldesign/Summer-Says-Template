@@ -73,6 +73,7 @@ body {
  		top: -1em;
  	}
 
+/* TEXT LINK UNDER COPY OPTION */
  	a {
  		font-family: $Montserrat;
  		font-size: .8em;
@@ -87,10 +88,16 @@ body {
  	a:hover {
  		color: $gold;
  	}
- }
+}
+
+.post:hover {
+	-webkit-box-shadow: $border-inset;
+    -moz-box-shadow: $border-inset;
+    box-shadow: $border-inset;
+}
 
 .post:hover img {
-	opacity: 0.1;
+	opacity: 0;
 }
 
  .post:hover article {

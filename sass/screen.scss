@@ -7,48 +7,44 @@
 @import "partials/_main.scss";
 @import "partials/_normalize.scss";
 @import "partials/_header.scss";
+@import "partials/_fonts.scss";
+@import "partials/_social.scss";
 
+$black: #414042;
+$grey: #BCBEC0;
+$gold: #9E760D;
+$light-grey: #F6F6F6;
+$grey-border: 3px solid $grey;
+$border-inset: inset 0px 0px 0px 3px $grey;
+$corner: 3px;
 
-* {
-	border: 1px black solid;
+body {
+	background-color: $light-grey;
 }
 
 #wrapper {
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
-
-}
-
-.social-widget {
-	position:absolute;
-	left: 68%;
-	width: 32%;
-	padding-top: 32%;
-	background-color: green;
- 	margin-bottom: 2%;
 }
 
 .container {
 	width: 100%;
 }
 
-
-
  #content {
  	width: 100%;
  	margin: 0 auto;
  	padding: 0;
- 	text-align: justify;
  	position: relative;
  }
 
  .post {
  	width: 32%;
- 	display: inline-block;
  	margin-bottom: 2%;
- 	background-color: blue;
+ 	background-color: $light-grey;
  	background-size: 100%;
+ 	border-radius: $corner;
 
  	img {
  		width: 100%;
@@ -58,9 +54,7 @@
  .gutter-sizer {
  	width: 2%;
  }
+
+ /* MEDIA QUERIES */
+
  
- #content:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-}

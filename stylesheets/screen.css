@@ -912,98 +912,121 @@ table {
   border-spacing: 0;
 }
 
-/* line 1, ../sass/partials/_header.scss */
+/* line 10, ../sass/partials/_header.scss */
 header {
   width: 100%;
-  padding-top: 33%;
+  padding-top: 45%;
   background-color: red;
-  background: url("../img/5.jpg") no-repeat;
+  background: url("../img/ss-header.jpg") no-repeat;
   background-size: 100%;
+  border-radius: 3px;
 }
 
-/* line 11, ../sass/partials/_header.scss */
+/* line 19, ../sass/partials/_header.scss */
+header:hover {
+  -webkit-box-shadow: inset 0px 0px 10px 1px #9e760d;
+  -moz-box-shadow: inset 0px 0px 10px 1px #9e760d;
+  box-shadow: inset 0px 0px 10px 1px #9e760d;
+}
+
+/* line 25, ../sass/partials/_header.scss */
 nav {
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #bcbec0;
   padding: 20px 0 0 0;
   margin: 0 0 40px 0;
 }
-/* line 18, ../sass/partials/_header.scss */
+/* line 32, ../sass/partials/_header.scss */
 nav ul {
   width: 90%;
   margin: 0 auto;
   text-align: justify;
   padding: 0;
 }
-/* line 25, ../sass/partials/_header.scss */
+/* line 39, ../sass/partials/_header.scss */
 nav li {
   display: inline-block;
-  line-height: 0.1em;
 }
-/* line 30, ../sass/partials/_header.scss */
+/* line 43, ../sass/partials/_header.scss */
+nav a {
+  line-height: 0.1em;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #414042;
+  text-decoration: none;
+}
+/* line 52, ../sass/partials/_header.scss */
+nav a:hover {
+  color: #9e760d;
+}
+/* line 57, ../sass/partials/_header.scss */
 nav ul:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
 
-/* line 12, ../sass/screen.scss */
-* {
-  border: 1px black solid;
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/montserrat-bold-webfont.eot");
+  src: url("fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/montserrat-bold-webfont.woff") format("woff"), url("fonts/montserrat-bold-webfont.ttf") format("truetype"), url("fonts/montserrat-bold-webfont.svg#Montserrat") format("svg");
 }
 
-/* line 16, ../sass/screen.scss */
+/* line 9, ../sass/partials/_social.scss */
+.social-widget {
+  position: absolute;
+  left: 68%;
+  width: 32%;
+  padding-top: 54%;
+  margin-bottom: 2%;
+  -webkit-box-shadow: inset 0px 0px 0px 3px #bcbec0;
+  -moz-box-shadow: inset 0px 0px 0px 3px #bcbec0;
+  box-shadow: inset 0px 0px 0px 3px #bcbec0;
+  border-radius: 3px;
+}
+
+/* line 21, ../sass/screen.scss */
+body {
+  background-color: #f6f6f6;
+}
+
+/* line 25, ../sass/screen.scss */
 #wrapper {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
 
-/* line 23, ../sass/screen.scss */
-.social-widget {
-  position: absolute;
-  left: 68%;
-  width: 32%;
-  padding-top: 32%;
-  background-color: green;
-  margin-bottom: 2%;
-}
-
-/* line 32, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 .container {
   width: 100%;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 #content {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  text-align: justify;
   position: relative;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .post {
   width: 32%;
-  display: inline-block;
   margin-bottom: 2%;
-  background-color: blue;
+  background-color: #f6f6f6;
   background-size: 100%;
+  border-radius: 3px;
 }
-/* line 53, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 .post img {
   width: 100%;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .gutter-sizer {
   width: 2%;
 }
 
-/* line 62, ../sass/screen.scss */
-#content:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
+/* MEDIA QUERIES */

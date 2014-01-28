@@ -1,16 +1,30 @@
+$black: #414042;
+$grey: #BCBEC0;
+$gold: #9E760D;
+$light-grey: #F6F6F6;
+$grey-border: 2px solid $grey;
+$border-inset: inset 0px 0px 10px 1px $gold;
+$corner: 3px;
+
+
 header {
 	width: 100%;
-	padding-top: 33%;
+	padding-top: 45%;
 	background-color: red;
-	background: url("../img/5.jpg") no-repeat;
+	background: url("../img/ss-header.jpg") no-repeat;
     background-size: 100%;
+    border-radius: $corner;
+}
 
-
+header:hover {
+	-webkit-box-shadow: $border-inset;
+    -moz-box-shadow: $border-inset;
+    box-shadow: $border-inset;
 }
 
 nav {
 	width: 100%;
-	border-bottom: 2px solid black;
+	border-bottom: $grey-border;
 	padding: 20px 0 0 0;
 	margin: 0 0 40px 0;
 
@@ -24,8 +38,21 @@ nav {
 
 	li {
 		display: inline-block;
-		line-height: 0.1em;
 	}
+
+	a {
+		line-height: 0.1em;
+		font-family: "Montserrat", Helvetica, sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		color: $black;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: $gold;
+	}
+
 
 	ul:after {
 	    content: '';

@@ -1,0 +1,19 @@
+$black: #414042;
+$grey: #BCBEC0;
+$gold: #9E760D;
+$grey-border: 2px solid $grey;
+$border-inset: inset 0px 0px 0px 3px $grey;
+$corner: 3px;
+
+
+.social-widget {
+	position:absolute;
+	left: 68%;
+	width: 32%;
+	padding-top: 54%;
+ 	margin-bottom: 2%;
+ 	-webkit-box-shadow: $border-inset;
+    -moz-box-shadow: $border-inset;
+    box-shadow: $border-inset;
+ 	border-radius: $corner;
+}

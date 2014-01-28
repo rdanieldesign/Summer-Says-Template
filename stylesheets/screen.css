@@ -912,7 +912,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 10, ../sass/partials/_header.scss */
+/* line 11, ../sass/partials/_header.scss */
 header {
   width: 100%;
   padding-top: 45%;
@@ -922,32 +922,32 @@ header {
   border-radius: 3px;
 }
 
-/* line 19, ../sass/partials/_header.scss */
+/* line 20, ../sass/partials/_header.scss */
 header:hover {
   -webkit-box-shadow: inset 0px 0px 10px 1px #9e760d;
   -moz-box-shadow: inset 0px 0px 10px 1px #9e760d;
   box-shadow: inset 0px 0px 10px 1px #9e760d;
 }
 
-/* line 25, ../sass/partials/_header.scss */
+/* line 26, ../sass/partials/_header.scss */
 nav {
   width: 100%;
   border-bottom: 2px solid #bcbec0;
   padding: 20px 0 0 0;
   margin: 0 0 40px 0;
 }
-/* line 32, ../sass/partials/_header.scss */
+/* line 33, ../sass/partials/_header.scss */
 nav ul {
   width: 90%;
   margin: 0 auto;
   text-align: justify;
   padding: 0;
 }
-/* line 39, ../sass/partials/_header.scss */
+/* line 40, ../sass/partials/_header.scss */
 nav li {
   display: inline-block;
 }
-/* line 43, ../sass/partials/_header.scss */
+/* line 44, ../sass/partials/_header.scss */
 nav a {
   line-height: 0.1em;
   font-family: "Montserrat", Helvetica, sans-serif;
@@ -956,11 +956,11 @@ nav a {
   color: #414042;
   text-decoration: none;
 }
-/* line 52, ../sass/partials/_header.scss */
+/* line 53, ../sass/partials/_header.scss */
 nav a:hover {
   color: #9e760d;
 }
-/* line 57, ../sass/partials/_header.scss */
+/* line 58, ../sass/partials/_header.scss */
 nav ul:after {
   content: '';
   display: inline-block;
@@ -971,6 +971,14 @@ nav ul:after {
   font-family: 'Montserrat';
   src: url("fonts/montserrat-bold-webfont.eot");
   src: url("fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/montserrat-bold-webfont.woff") format("woff"), url("fonts/montserrat-bold-webfont.ttf") format("truetype"), url("fonts/montserrat-bold-webfont.svg#Montserrat") format("svg");
+}
+
+@font-face {
+  font-family: 'droid_serifregular';
+  src: url("fonts/DroidSerif-webfont.eot");
+  src: url("fonts/DroidSerif-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DroidSerif-webfont.woff") format("woff"), url("fonts/DroidSerif-webfont.ttf") format("truetype"), url("fonts/DroidSerif-webfont.svg#droid_serifregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* line 9, ../sass/partials/_social.scss */
@@ -986,24 +994,24 @@ nav ul:after {
   border-radius: 3px;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 body {
   background-color: #f6f6f6;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 #wrapper {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 .container {
   width: 100%;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 #content {
   width: 100%;
   margin: 0 auto;
@@ -1011,7 +1019,7 @@ body {
   position: relative;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .post {
   width: 32%;
   margin-bottom: 2%;
@@ -1019,12 +1027,58 @@ body {
   background-size: 100%;
   border-radius: 3px;
 }
-/* line 49, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 .post img {
   width: 100%;
 }
+/* line 56, ../sass/screen.scss */
+.post article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 10px 20px;
+}
+/* line 63, ../sass/screen.scss */
+.post h3 {
+  font-family: "droid_serifregular", sans-serif;
+  font-size: 1.8em;
+  color: #414042;
+}
+/* line 69, ../sass/screen.scss */
+.post p {
+  font-size: 1em;
+  color: #6D6E71;
+  position: relative;
+  top: -1em;
+}
+/* line 76, ../sass/screen.scss */
+.post a {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: .8em;
+  color: #414042;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  position: relative;
+  top: -2em;
+}
+/* line 87, ../sass/screen.scss */
+.post a:hover {
+  color: #9e760d;
+}
 
-/* line 54, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
+.post:hover img {
+  opacity: 0.1;
+}
+
+/* line 96, ../sass/screen.scss */
+.post:hover article {
+  display: block;
+}
+
+/* line 100, ../sass/screen.scss */
 .gutter-sizer {
   width: 2%;
 }

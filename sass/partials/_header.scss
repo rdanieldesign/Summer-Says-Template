@@ -5,6 +5,7 @@ $light-grey: #F6F6F6;
 $grey-border: 2px solid $grey;
 $border-inset: inset 0px 0px 10px 1px $gold;
 $corner: 3px;
+$Montserrat: "Montserrat", Helvetica, sans-serif;
 
 
 header {
@@ -42,7 +43,7 @@ nav {
 
 	a {
 		line-height: 0.1em;
-		font-family: "Montserrat", Helvetica, sans-serif;
+		font-family: $Montserrat;
 		text-transform: uppercase;
 		letter-spacing: 4px;
 		color: $black;

@@ -1,19 +1,57 @@
 $black: #414042;
 $grey: #BCBEC0;
 $gold: #9E760D;
+$light-grey: #F6F6F6;
 $grey-border: 2px solid $grey;
 $border-inset: inset 0px 0px 0px 3px $grey;
 $corner: 3px;
+$Montserrat: "Montserrat", Helvetica, sans-serif;
+$Droid-Serif: "droid_serifregular", sans-serif;
+$Muli: "muliregular", Helvetica, sans-serif;
+
 
 
 .social-widget {
 	position:absolute;
 	left: 68%;
 	width: 32%;
-	padding-top: 54%;
  	margin-bottom: 2%;
- 	-webkit-box-shadow: $border-inset;
-    -moz-box-shadow: $border-inset;
-    box-shadow: $border-inset;
- 	border-radius: $corner;
+
+ 	article {
+ 		width: 100%;
+ 		position: relative;
+		top: -2em;
+
+ 		h3 {
+		font-family: $Droid-Serif;
+		font-size: 2em;
+		line-height: 1em;
+ 		color: $black;
+		}
+
+		i {
+			color: $black;
+			font-size: 4em;
+			float: left;
+			width: 33%;
+			line-height: 0.2em;
+		}
+
+		i:hover {
+			color: $gold;
+		}
+
+		p {
+			font-family: $Muli;
+			font-size: 1em;
+	 		color: #6D6E71;
+		}
+ 	}
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 700px) {
+
+
 }

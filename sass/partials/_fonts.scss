@@ -18,3 +18,15 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'muliregular';
+    src: url('fonts/muli-regular-webfont.eot');
+    src: url('fonts/muli-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/muli-regular-webfont.woff') format('woff'),
+         url('fonts/muli-regular-webfont.ttf') format('truetype'),
+         url('fonts/muli-regular-webfont.svg#muliregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

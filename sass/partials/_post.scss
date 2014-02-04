@@ -1,0 +1,46 @@
+$black: #414042;
+$grey: #BCBEC0;
+$gold: #9E760D;
+$light-grey: #F6F6F6;
+$grey-border: 3px solid $grey;
+$border-inset: inset 0px 0px 0px 3px $grey;
+$corner: 3px;
+$Montserrat: "Montserrat", Helvetica, sans-serif;
+$Droid-Serif: "droid_serifregular", sans-serif;
+$Muli: "muliregular", Helvetica, sans-serif;
+
+
+
+.post-full {
+	width: 100%;
+	height: auto;
+	margin-bottom: 100px;
+	display: block;
+
+	img {
+		float: left;
+		width: 66%;
+		display: block;
+	}
+
+	article {
+		width: 32%;
+		float: left;
+		margin-left: 2%;
+		position: relative;
+		top: -2em;
+	}
+
+	h3 {
+		font-family: $Droid-Serif;
+		font-size: 2em;
+		line-height: 1em;
+		color: $black;
+	}
+
+	p {
+		font-family: $Muli;
+		font-size: 1em;
+ 		color: #6D6E71;
+	}
+}

@@ -11,6 +11,7 @@
 @import "partials/_social.scss";
 @import "partials/_post.scss";
 @import "partials/_foundation.scss";
+@import "partials/_grid.scss";
 
 $black: #414042;
 $grey: #BCBEC0;
@@ -48,98 +49,3 @@ body {
 	border-bottom: $grey-border;
 	width: 100%;
 }
-
- #content {
- 	display: block;
- 	width: 100%;
- 	margin: 0 auto;
- 	padding: 0;
- }
-
- .post {
- 	width: 32%;
- 	margin-bottom: 2%;
- 	background-color: white;
- 	background-size: 100%;
- 	border-radius: $corner;
- 	overflow: hidden;
-
- 	img {
- 		width: 100%;
- 	}
-
- 	article {
- 		position: absolute;
- 		top: 0; left: 0;
- 		display: none;
- 		padding: 10px 20px;
- 	}
-
- 	h3 {
- 		font-family: $Droid-Serif;
- 		font-size: 1.8em;
- 		color: $black;
- 	}
-
- 	p {
- 		font-family: $Muli;
- 		font-size: 1em;
- 		color: #6D6E71;
- 		position: relative;
- 		top: -1em;
- 	}
-
-/* TEXT LINK UNDER COPY OPTION 
- 	a {
- 		font-family: $Montserrat;
- 		font-size: .8em;
- 		color: $black;
- 		text-decoration: none;
- 		text-transform: uppercase;
- 		letter-spacing: .2em;
- 		position: relative;
- 		top: -2em;
- 	}
-
- 	a:hover {
- 		color: $gold;
- 	}*/
-
-/* BOTTOM BUTTON LINK OPTION */
- 	a {
- 		font-family: $Montserrat;
- 		font-size: .8em;
- 		color: $black;
- 		text-decoration: none;
- 		text-transform: uppercase;
- 		letter-spacing: .2em;
- 		position: relative;
- 		top: -2em;
- 	}
-
- 	a:hover {
- 		color: $gold;
- 	}
-}
-
-.post:hover {
-	-webkit-box-shadow: $border-inset;
-    -moz-box-shadow: $border-inset;
-    box-shadow: $border-inset;
-}
-
-.post:hover img {
-	opacity: 0;
-}
-
- .post:hover article {
- 	display: block;
- }
-
- .gutter-sizer {
- 	width: 2%;
- }
-
- /* MEDIA QUERIES */
-
- 

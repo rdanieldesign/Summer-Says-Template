@@ -51,7 +51,18 @@ $Muli: "muliregular", Helvetica, sans-serif;
 
 /* MEDIA QUERIES */
 
-@media (max-width: 700px) {
+ /* MEDIA QUERIES */
 
+ @media (max-width: 700px) {
+
+ 	.social-widget {
+		width: 49%;
+		left: 9999px;
+		height: 0;
+
+		article {
+			display: none;
+		}
+	}
 
 }

@@ -1,1 +1,1 @@
-var container=document.querySelector("#content"),msnry=new Masonry(container,{columnWidth:".post",itemSelector:".post"});
+$(document).ready(function(){$(".collapse-nav").click(function(){$(".expand").toggleClass("open")})});

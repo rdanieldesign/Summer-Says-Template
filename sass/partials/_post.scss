@@ -2,45 +2,95 @@ $black: #414042;
 $grey: #BCBEC0;
 $gold: #9E760D;
 $light-grey: #F6F6F6;
-$grey-border: 3px solid $grey;
-$border-inset: inset 0px 0px 0px 3px $grey;
+$grey-border: 2px solid $grey;
+$border-inset: inset 0px 0px 0px 2px $grey;
 $corner: 3px;
 $Montserrat: "Montserrat", Helvetica, sans-serif;
 $Droid-Serif: "droid_serifregular", sans-serif;
 $Muli: "muliregular", Helvetica, sans-serif;
-
-
+$Bebas: "bebas_neueregular", Helvetica, sans-serif;
+$Mensch: "MenschRegular", Helvetica, sans-serif;
 
 .post-full {
 	width: 100%;
-	height: auto;
-	margin-bottom: 100px;
 	display: block;
 
 	img {
-		float: left;
-		width: 66%;
+		width: auto;
+		max-height: 500px;
 		display: block;
+		margin: 0 auto;
+		max-width: 96%;
+		border-radius: $corner;
 	}
 
 	article {
-		width: 32%;
-		float: left;
-		margin-left: 2%;
-		position: relative;
-		top: -2em;
+		width: 66%;
+		margin: 0 auto;
 	}
 
 	h3 {
-		font-family: $Droid-Serif;
-		font-size: 2em;
+		font-family: Baskerville;
+		font-style: italic;
+		font-size: 2.2em;
+		letter-spacing: 2px;
 		line-height: 1em;
 		color: $black;
+		text-align:center;
 	}
 
 	p {
 		font-family: $Muli;
 		font-size: 1em;
  		color: #6D6E71;
+ 		line-height:1.5em;
+ 		text-align: justify;
+ 		padding-bottom: 2%;
 	}
+
+	a {
+ 		font-family: $Montserrat;
+ 		font-size: 0.75em;
+ 		color: #fff;
+ 		text-decoration: none;
+ 		text-transform: uppercase;
+ 		letter-spacing: .15em;
+ 		text-align: center;
+
+ 		width: 33%;
+ 		padding: 2% 0;
+ 		border-radius: $corner;
+ 		display: block;
+ 		margin: 0 auto;
+ 		background-color: $black;
+ 		-webkit-transition: background-color 250ms;
+	    -moz-transition: background-color 250ms;
+	    -o-transition: background-color 250ms;
+	    transition: background-color 250ms;
+
+ 	}
+
+ 	a:hover {
+ 		background-color: $gold;
+ 		-webkit-transition: background-color 250ms;
+	    -moz-transition: background-color 250ms;
+	    -o-transition: background-color 250ms;
+	    transition: background-color 250ms;
+ 	}
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 740px) {
+
+	.post-full {
+		p {
+			text-align:left;
+		}
+
+		article {
+			width: 80%;
+		}
+	}
+
 }

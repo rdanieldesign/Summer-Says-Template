@@ -23,16 +23,20 @@ $corner: 3px;
 $Montserrat: "Montserrat", Helvetica, sans-serif;
 $Droid-Serif: "droid_serifregular", sans-serif;
 $Muli: "muliregular", Helvetica, sans-serif;
+$Bebas: "bebas_neueregular", Helvetica, sans-serif;
+$Mensch: "MenschRegular", Helvetica, sans-serif;
 
 
 body {
-	background-color: $light-grey;
+	background-color: #E5E5E5;
 }
 
 #wrapper {
 	width: 100%;
 	max-width: 960px;
+	padding: 0 20px;
 	margin: 0 auto;
+	background-color: $light-grey;
 }
 
 .container {
@@ -49,3 +53,18 @@ body {
 	border-bottom: $grey-border;
 	width: 100%;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+
+	#wrapper {
+		padding: 0;
+	}
+
+}
+
+
+
+
+

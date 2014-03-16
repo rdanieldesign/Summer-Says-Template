@@ -22,3 +22,17 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+// Images Loaded and Masonry Layout
+
+imagesLoaded( '#content', function() {
+    var container = document.querySelector('#content');
+    var msnry = new Masonry( container, {
+      // options
+      columnWidth: ".post",
+      itemSelector: ".post",
+      stamp: ".stamp",
+      gutter: ".gutter-sizer"
+    });
+});
+

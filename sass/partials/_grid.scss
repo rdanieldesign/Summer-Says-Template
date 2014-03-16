@@ -8,6 +8,8 @@ $corner: 3px;
 $Montserrat: "Montserrat", Helvetica, sans-serif;
 $Droid-Serif: "droid_serifregular", sans-serif;
 $Muli: "muliregular", Helvetica, sans-serif;
+$Bebas: "bebas_neueregular", Helvetica, sans-serif;
+$Mensch: "MenschRegular", Helvetica, sans-serif;
 
 #content {
  	display: block;
@@ -17,27 +19,37 @@ $Muli: "muliregular", Helvetica, sans-serif;
  }
 
 .post {
- 	width: 32%;
+ 	width: 31.9%;
  	margin-bottom: 2%;
  	background-color: white;
  	background-size: 100%;
  	border-radius: $corner;
  	overflow: hidden;
+	text-align: center;
 
  	img {
  		width: 100%;
+ 		height: auto;
  	}
 
  	article {
- 		position: absolute;
- 		top: 0; left: 0;
  		display: none;
- 		padding: 10px 20px;
+ 		position: absolute;
+ 		width: 100%;
+ 		top: 0;
+ 		padding: 10px 0;
+ 		text-align: center;
+
+ 		img {
+ 			display:none;
+ 		}
  	}
 
  	h3 {
- 		font-family: $Droid-Serif;
- 		font-size: 1.8em;
+ 		font-family: Baskerville;
+		font-style: italic;
+		font-size: 1.7em;
+		letter-spacing: 2px;
  		color: $black;
  	}
 
@@ -66,19 +78,36 @@ $Muli: "muliregular", Helvetica, sans-serif;
  	}*/
 
 /* BOTTOM BUTTON LINK OPTION */
- 	a {
- 		font-family: $Montserrat;
- 		font-size: .8em;
- 		color: $black;
+ 	a.button {
+ 		font-size: 0.75em;
+		font-family: $Montserrat;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		color: #fff;
+		background-color: $black;
  		text-decoration: none;
  		text-transform: uppercase;
- 		letter-spacing: .2em;
- 		position: relative;
- 		top: -2em;
+ 		letter-spacing: .15em;
+ 		text-align: center;
+
+ 		width: 100%;
+ 		padding: 5% 0;
+ 		display: block;
+ 		display: none;
+ 		position: absolute;
+ 		bottom: 0;		
+ 		-webkit-transition: background-color 250ms;
+	    -moz-transition: background-color 250ms;
+	    -o-transition: background-color 250ms;
+	    transition: background-color 250ms;
  	}
 
- 	a:hover {
- 		color: $gold;
+ 	a.button:hover {
+ 		background-color: $gold;
+		-webkit-transition: background-color 250ms;
+	    -moz-transition: background-color 250ms;
+	    -o-transition: background-color 250ms;
+	    transition: background-color 250ms;
  	}
 }
 
@@ -92,13 +121,14 @@ $Muli: "muliregular", Helvetica, sans-serif;
 	opacity: 0;
 }
 
- .post:hover article {
+ .post:hover article, .post:hover a {
  	display: block;
  }
 
  .gutter-sizer {
  	width: 2%;
  }
+
 
  /* MEDIA QUERIES */
 

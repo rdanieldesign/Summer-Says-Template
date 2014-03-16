@@ -1,7 +1,6 @@
-var container = document.querySelector('#content');
-var msnry = new Masonry( container, {
-  // options
-  columnWidth: ".post",
-  itemSelector: ".post",
+$(document).ready(function(){
+	$( ".collapse-nav" ).click(function() {
+		$( ".expand" ).toggleClass("open");
+	});
 });
 

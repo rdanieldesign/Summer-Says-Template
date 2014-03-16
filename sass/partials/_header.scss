@@ -3,10 +3,13 @@ $grey: #BCBEC0;
 $gold: #9E760D;
 $light-grey: #F6F6F6;
 $grey-border: 2px solid $grey;
-$border-inset: inset 0px 0px 10px 1px $gold;
+$border-inset: inset 0px 0px 0px 2px $grey;
 $corner: 3px;
 $Montserrat: "Montserrat", Helvetica, sans-serif;
+$Droid-Serif: "droid_serifregular", sans-serif;
 $Muli: "muliregular", Helvetica, sans-serif;
+$Bebas: "bebas_neueregular", Helvetica, sans-serif;
+$Mensch: "MenschRegular", Helvetica, sans-serif;
 
 
 header {
@@ -15,37 +18,35 @@ header {
 	background-color: red;
 	background: url("../img/ss-header.jpg") no-repeat;
     background-size: 100%;
+    -moz-border-radius-bottomright: $corner;
+	-webkit-border-bottom-right-radius: $corner;
+    -moz-border-radius-bottomleft: $corner;
+	-webkit-border-bottom-left-radius: $corner;
+	-webkit-transition: opacity 250ms;
+    -moz-transition: opacity 250ms;
+    -o-transition: opacity 250ms;
+    transition: opacity 250ms;
 }
 
 header:hover {
-	-webkit-box-shadow: $border-inset;
-    -moz-box-shadow: $border-inset;
-    box-shadow: $border-inset;
+	opacity: 0.9;
+	-webkit-transition: opacity 250ms;
+    -moz-transition: opacity 250ms;
+    -o-transition: opacity 250ms;
+    transition: opacity 250ms;
 }
 
 nav {
 	width: 100%;
 	border-bottom: $grey-border;
-	border-top: $grey-border;
-	padding: 30px 0 10px 0;
-	margin: 0 0 50px 0;
-
-	i {
-		display: block;
-		text-align:center;
-		font-size: 3em;
-		color: $black;
-	}
-
-	i:hover {
-		color: $gold;
-	}
+	margin-bottom: 50px;
+	padding:0;
 
 	ul {
 		width: 90%;
 		margin: 0 auto;
 		text-align: justify;
-		padding: 0;
+		padding: 4% 0 1.5% 0;
 	}
 
 	li {
@@ -54,36 +55,37 @@ nav {
 
 	a {
 		line-height: 0.1em;
-		font-family: $Montserrat;
+		font-size: 1.3em;
+		font-family: $Bebas;
 		text-transform: uppercase;
 		letter-spacing: 4px;
 		color: $black;
 		text-decoration: none;
+ 		-webkit-transition: color 250ms;
+	    -moz-transition: color 250ms;
+	    -o-transition: color 250ms;
+	    transition: color 250ms;
 	}
 
-	a:hover {
+	a:hover, a:active {
 		color: $gold;
+ 		-webkit-transition: color 250ms;
+	    -moz-transition: color 250ms;
+	    -o-transition: color 250ms;
+	    transition: color 250ms;
+
 	}
 
 
-	ul:after {
+	ul.expand:after {
 	    content: '';
 	    display: inline-block;
 	    width: 100%;
 	}
-	
 }
 
 .collapse {
 	display:none;
-
-	.collapse-nav {
-		width: 60%;
-	}
-
-	li {
-		width: 8%;
-	}
 }
 
 
@@ -91,45 +93,93 @@ nav {
 
 @media (max-width: 700px) {
 
-	nav {
-		padding: 0;
+	.expand {
+		display:none;
+	  	position:relative;
+	  	padding: 0;
+	  	z-index: 9999;
+	  	background-color: #fff;
+	  	width: 100%;
+	  	float: left;
+
+	  	li {
+	  		width: 100%;
+	  		background-color: $black;
+	  		text-align: center;
+	  		padding: 3% 0;
+	  		margin-bottom: 2px;
+	  	}
+
+	  	a {
+	  		padding: 2% 0;
+	  		color: #fff;
+	  		font-size: 0.9em;
+			font-family: $Montserrat;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			color: #fff;
+	  	}
+
+	  	a:hover {
+		color: #fff;
+		}
+
+	  	li:hover {
+	  		background-color: $gold;
+	  	}
 	}
 
-	.expand {
-	  	display: none;
+	.open {
+		display: block;
+	}
+
+	nav ul.expand:after {
+		display:none;
 	}
 
 	.collapse {
 	  	display: block;
-	  	height: 65px;
-	  	width: 100%;
-	  	padding: 10px 0;
-	  	margin-right: 20px;
+	  	width:100%;
+	  	heigth: auto;
+	  	padding: 2% 0;
 
-	  	.collapse-nav {
-	  		border-right: $grey-border;
-	  	}
-
-		i:hover {
-			color: $gold;
+  		.collapse-nav {
+		width: 60%;
+		text-align:center;
+  		border-right: $grey-border;
 		}
 
-	    ul {
-	    	width: 100%;
-	    }
+		.collapse-social {
+			width: 38%;
 
+			ul {
+				padding: 0;
+			}
+
+			li {
+				width: 48%;
+				text-align:center;
+			}
+		}
 	}
 
+	i {
+		font-size: 3em;
+		color: $black;
+	}
+
+	i:hover {
+		color: $gold;
+	}
+	
 }
 
 @media (max-width: 500px) {
 
 	.collapse i {
-		font-size: 2em;
 	}
 
 	.collapse-nav i {
-		font-size: 3em;
 	}
 
 }

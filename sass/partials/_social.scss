@@ -6,11 +6,9 @@ $grey-border: 2px solid $grey;
 $border-inset: inset 0px 0px 0px 2px $grey;
 $corner: 3px;
 $Montserrat: "Montserrat", Helvetica, sans-serif;
-$Droid-Serif: "droid_serifregular", sans-serif;
 $Muli: "muliregular", Helvetica, sans-serif;
 $Bebas: "bebas_neueregular", Helvetica, sans-serif;
-$Mensch: "MenschRegular", Helvetica, sans-serif;
-$rbno2: "rbno2_lightregular", Helvetica, sans-serif;
+$Lane: "lane_-_narrowregular", Helvetica, sans-serif;
 
 
 .social-widget {
@@ -26,9 +24,8 @@ $rbno2: "rbno2_lightregular", Helvetica, sans-serif;
 		padding-left: 5%;
 
  		h3 {
-		font-family: Baskerville;
-		font-style: italic;
-		font-size: 2.2em;
+		font-family: $Lane;
+		font-size: 2em;
 		letter-spacing: 2px;
 		line-height: 1em;
  		color: $black;
@@ -37,16 +34,16 @@ $rbno2: "rbno2_lightregular", Helvetica, sans-serif;
 		p {
 			font-family: $Muli;
 	 		font-size: 1em;
-	 		color: #6D6E71;
+	 		color: #808080;
 	 		position: relative;
 			top: -0.6em;
 		}
 
-		i {
-			color: $black;
-			font-size: 3.5em;
+		img {
+			width: 50px;
+			height:50px;
 			float: left;
-			padding-right: 7%;
+			margin-right: 7%;
 	 		position: relative;
 			top: -0.4em;
 	 		-webkit-transition: color 250ms;
@@ -56,12 +53,12 @@ $rbno2: "rbno2_lightregular", Helvetica, sans-serif;
 
 		}
 
-		i:hover {
-			color: $gold;
-	 		-webkit-transition: color 250ms;
-		    -moz-transition: color 250ms;
-		    -o-transition: color 250ms;
-		    transition: color 250ms;
+		img:hover {
+			opacity: 0.9;
+			-webkit-transition: opacity 250ms;
+		    -moz-transition: opacity 250ms;
+		    -o-transition: opacity 250ms;
+		    transition: opacity 250ms;
 
 		}
 

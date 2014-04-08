@@ -6,18 +6,13 @@ $grey-border: 2px solid $grey;
 $border-inset: inset 0px 0px 0px 2px $grey;
 $corner: 3px;
 $Montserrat: "Montserrat", Helvetica, sans-serif;
-$Droid-Serif: "droid_serifregular", sans-serif;
 $Muli: "muliregular", Helvetica, sans-serif;
 $Bebas: "bebas_neueregular", Helvetica, sans-serif;
-$Mensch: "MenschRegular", Helvetica, sans-serif;
 
 
-header {
+.header {
 	width: 100%;
-	padding-top: 45%;
-	background-color: red;
-	background: url("../img/ss-header.jpg") no-repeat;
-    background-size: 100%;
+	height: auto;
     -moz-border-radius-bottomright: $corner;
 	-webkit-border-bottom-right-radius: $corner;
     -moz-border-radius-bottomleft: $corner;
@@ -28,7 +23,7 @@ header {
     transition: opacity 250ms;
 }
 
-header:hover {
+.header:hover {
 	opacity: 0.9;
 	-webkit-transition: opacity 250ms;
     -moz-transition: opacity 250ms;
@@ -90,6 +85,15 @@ nav {
 
 
 /* MEDIA QUERIES */
+@media (max-width: 1000px) {
+
+	header {
+		-moz-border-radius-bottomright: 0;
+		-webkit-border-bottom-right-radius: 0;
+	    -moz-border-radius-bottomleft: 0;
+		-webkit-border-bottom-left-radius: 0;
+	}
+}
 
 @media (max-width: 700px) {
 
@@ -108,24 +112,44 @@ nav {
 	  		text-align: center;
 	  		padding: 3% 0;
 	  		margin-bottom: 2px;
+			-webkit-transition: background-color 250ms;
+		    -moz-transition: background-color 250ms;
+		    -o-transition: background-color 250ms;
+		    transition: background-color 250ms;
+
 	  	}
 
 	  	a {
 	  		padding: 2% 0;
 	  		color: #fff;
-	  		font-size: 0.9em;
-			font-family: $Montserrat;
+	  		font-size: 0.8em;
+			font-family: $Muli;
 			text-transform: uppercase;
-			letter-spacing: 3px;
+			letter-spacing: 2px;
 			color: #fff;
+			-webkit-transition: color 250ms;
+		    -moz-transition: color 250ms;
+		    -o-transition: color 250ms;
+		    transition: color 250ms;
+
 	  	}
 
 	  	a:hover {
 		color: #fff;
+		-webkit-transition: color 250ms;
+	    -moz-transition: color 250ms;
+	    -o-transition: color 250ms;
+	    transition: color 250ms;
+
 		}
 
 	  	li:hover {
 	  		background-color: $gold;
+			-webkit-transition: background-color 250ms;
+		    -moz-transition: background-color 250ms;
+		    -o-transition: background-color 250ms;
+		    transition: background-color 250ms;
+
 	  	}
 	}
 
@@ -166,10 +190,20 @@ nav {
 	i {
 		font-size: 3em;
 		color: $black;
+		-webkit-transition: color 250ms;
+	    -moz-transition: color 250ms;
+	    -o-transition: color 250ms;
+	    transition: color 250ms;
+
 	}
 
 	i:hover {
 		color: $gold;
+		-webkit-transition: color 250ms;
+	    -moz-transition: color 250ms;
+	    -o-transition: color 250ms;
+	    transition: color 250ms;
+
 	}
 	
 }

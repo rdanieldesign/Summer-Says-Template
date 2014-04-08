@@ -17,6 +17,7 @@ $Mensch: "MenschRegular", Helvetica, sans-serif;
 
 	img {
 		width: auto;
+		height: auto;
 		max-height: 500px;
 		display: block;
 		margin: 0 auto;
@@ -30,31 +31,42 @@ $Mensch: "MenschRegular", Helvetica, sans-serif;
 	}
 
 	h3 {
-		font-family: Baskerville;
-		font-style: italic;
+		font-family: $Lane;
 		font-size: 2.2em;
 		letter-spacing: 2px;
-		line-height: 1em;
+		line-height: 1.2em;
 		color: $black;
 		text-align:center;
 	}
 
+	h5 {
+ 		font-family: $Muli;
+		font-size: .8em;
+ 		color: #808080;
+ 		font-style: normal;
+		letter-spacing: 2px;
+		text-align:center;
+		text-transform: uppercase;
+		position: relative;
+		top: -1em;
+ 	}
+
 	p {
 		font-family: $Muli;
 		font-size: 1em;
- 		color: #6D6E71;
+ 		color: #808080;
  		line-height:1.5em;
  		text-align: justify;
  		padding-bottom: 2%;
 	}
 
 	a {
- 		font-family: $Montserrat;
+ 		font-family: $Muli;
  		font-size: 0.75em;
  		color: #fff;
  		text-decoration: none;
  		text-transform: uppercase;
- 		letter-spacing: .15em;
+ 		letter-spacing: 2px;
  		text-align: center;
 
  		width: 33%;

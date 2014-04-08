@@ -6,10 +6,10 @@ $grey-border: 2px solid $grey;
 $border-inset: inset 0px 0px 0px 2px $grey;
 $corner: 3px;
 $Montserrat: "Montserrat", Helvetica, sans-serif;
-$Droid-Serif: "droid_serifregular", sans-serif;
 $Muli: "muliregular", Helvetica, sans-serif;
 $Bebas: "bebas_neueregular", Helvetica, sans-serif;
-$Mensch: "MenschRegular", Helvetica, sans-serif;
+$Lane: "lane_-_narrowregular", Helvetica, sans-serif;
+
 
 #content {
  	display: block;
@@ -26,6 +26,13 @@ $Mensch: "MenschRegular", Helvetica, sans-serif;
  	border-radius: $corner;
  	overflow: hidden;
 	text-align: center;
+	float: left;
+
+	/* No Javascript
+
+	float: left;
+
+	*/
 
  	img {
  		width: 100%;
@@ -46,17 +53,28 @@ $Mensch: "MenschRegular", Helvetica, sans-serif;
  	}
 
  	h3 {
- 		font-family: Baskerville;
-		font-style: italic;
-		font-size: 1.7em;
+ 		font-family: $Lane;
+		font-size: 1.6em;
 		letter-spacing: 2px;
  		color: $black;
+ 		padding: 0 10px;
+ 	}
+
+ 	h5 {
+ 		font-family: $Muli;
+		font-size: .8em;
+ 		color: #808080;
+ 		font-style: normal;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		position: relative;
+		top: -.7em;
  	}
 
  	p {
  		font-family: $Muli;
  		font-size: 1em;
- 		color: #6D6E71;
+ 		color: #808080;
  		position: relative;
  		top: -1em;
  	}
@@ -79,15 +97,14 @@ $Mensch: "MenschRegular", Helvetica, sans-serif;
 
 /* BOTTOM BUTTON LINK OPTION */
  	a.button {
- 		font-size: 0.75em;
-		font-family: $Montserrat;
+ 		font-size: 0.8em;
+		font-family: $Muli;
 		text-transform: uppercase;
-		letter-spacing: 3px;
+		letter-spacing: 2px;
 		color: #fff;
 		background-color: $black;
  		text-decoration: none;
  		text-transform: uppercase;
- 		letter-spacing: .15em;
  		text-align: center;
 
  		width: 100%;
@@ -136,6 +153,14 @@ $Mensch: "MenschRegular", Helvetica, sans-serif;
 
  	#content {
 		width: 96%;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+ 	.post h3 {
+ 		font-size: 1.2em;
 	}
 
 }

@@ -2,7 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,49 +23,489 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
+.header {
+  width: 100%;
+  height: auto;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-transition: opacity 250ms;
+  -moz-transition: opacity 250ms;
+  -o-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+.header:hover {
+  opacity: 0.9;
+  -webkit-transition: opacity 250ms;
+  -moz-transition: opacity 250ms;
+  -o-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+nav {
+  width: 100%;
+  border-bottom: 2px solid #bcbec0;
+  margin-bottom: 50px;
+  padding: 0;
+}
+nav ul {
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 4% 0 1.5% 0;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  line-height: 0.1em;
+  font-size: 1.3em;
+  font-family: "bebas_neueregular", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #414042;
+  text-decoration: none;
+  -webkit-transition: color 250ms;
+  -moz-transition: color 250ms;
+  -o-transition: color 250ms;
+  transition: color 250ms;
+}
+nav a:hover, nav a:active {
+  color: #9e760d;
+  -webkit-transition: color 250ms;
+  -moz-transition: color 250ms;
+  -o-transition: color 250ms;
+  transition: color 250ms;
+}
+nav ul.expand:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.collapse {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1000px) {
+  header {
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+  }
+}
+@media (max-width: 700px) {
+  .expand {
+    display: none;
+    position: relative;
+    padding: 0;
+    z-index: 9999;
+    background-color: #fff;
+    width: 100%;
+    float: left;
+  }
+  .expand li {
+    width: 100%;
+    background-color: #414042;
+    text-align: center;
+    padding: 3% 0;
+    margin-bottom: 2px;
+    -webkit-transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    -o-transition: background-color 250ms;
+    transition: background-color 250ms;
+  }
+  .expand a {
+    padding: 2% 0;
+    color: #fff;
+    font-size: 0.8em;
+    font-family: "muliregular", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-transition: color 250ms;
+    -moz-transition: color 250ms;
+    -o-transition: color 250ms;
+    transition: color 250ms;
+  }
+  .expand a:hover {
+    color: #fff;
+    -webkit-transition: color 250ms;
+    -moz-transition: color 250ms;
+    -o-transition: color 250ms;
+    transition: color 250ms;
+  }
+  .expand li:hover {
+    background-color: #9e760d;
+    -webkit-transition: background-color 250ms;
+    -moz-transition: background-color 250ms;
+    -o-transition: background-color 250ms;
+    transition: background-color 250ms;
+  }
+
+  .open {
+    display: block;
+  }
+
+  nav ul.expand:after {
+    display: none;
+  }
+
+  .collapse {
+    display: block;
+    width: 100%;
+    heigth: auto;
+    padding: 2% 0;
+  }
+  .collapse .collapse-nav {
+    width: 60%;
+    text-align: center;
+    border-right: 2px solid #bcbec0;
+  }
+  .collapse .collapse-social {
+    width: 38%;
+  }
+  .collapse .collapse-social ul {
+    padding: 0;
+  }
+  .collapse .collapse-social li {
+    width: 48%;
+    text-align: center;
+  }
+
+  i {
+    font-size: 3em;
+    color: #414042;
+    -webkit-transition: color 250ms;
+    -moz-transition: color 250ms;
+    -o-transition: color 250ms;
+    transition: color 250ms;
+  }
+
+  i:hover {
+    color: #9e760d;
+    -webkit-transition: color 250ms;
+    -moz-transition: color 250ms;
+    -o-transition: color 250ms;
+    transition: color 250ms;
+  }
+}
+#content {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.post {
+  width: 31.9%;
+  margin-bottom: 2%;
+  background-color: white;
+  background-size: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  text-align: center;
+  	/* No Javascript
+  
+  	float: left;
+  
+  	*/
+  /* TEXT LINK UNDER COPY OPTION 
+   	a {
+   		font-family: $Montserrat;
+   		font-size: .8em;
+   		color: $black;
+   		text-decoration: none;
+   		text-transform: uppercase;
+   		letter-spacing: .2em;
+   		position: relative;
+   		top: -2em;
+   	}
+  
+   	a:hover {
+   		color: $gold;
+   	}*/
+  /* BOTTOM BUTTON LINK OPTION */
+}
+.post img {
+  width: 100%;
+  height: auto;
+}
+.post article {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+.post article img {
+  display: none;
+}
+.post h3 {
+  font-family: "lane_-_narrowregular", Helvetica, sans-serif;
+  font-size: 1.6em;
+  letter-spacing: 2px;
+  color: #414042;
+  padding: 0 10px;
+}
+.post h5 {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: .8em;
+  color: #808080;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  top: -.7em;
+}
+.post p {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: 1em;
+  color: #808080;
+  position: relative;
+  top: -1em;
+}
+.post a.button {
+  font-size: 0.8em;
+  font-family: "muliregular", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #414042;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  padding: 5% 0;
+  display: block;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: background-color 250ms;
+  -moz-transition: background-color 250ms;
+  -o-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+.post a.button:hover {
+  background-color: #9e760d;
+  -webkit-transition: background-color 250ms;
+  -moz-transition: background-color 250ms;
+  -o-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+
+.post:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 2px #bcbec0;
+  -moz-box-shadow: inset 0px 0px 0px 2px #bcbec0;
+  box-shadow: inset 0px 0px 0px 2px #bcbec0;
+}
+
+.post:hover img {
+  opacity: 0;
+}
+
+.post:hover article, .post:hover a {
+  display: block;
+}
+
+.gutter-sizer {
+  width: 2%;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 960px) {
+  #content {
+    width: 96%;
+  }
+}
+@media (max-width: 800px) {
+  .post h3 {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 700px) {
+  .post {
+    width: 49%;
+    margin-bottom: 2%;
+  }
+}
+.social-widget {
+  position: absolute;
+  left: 68%;
+  width: 32%;
+  margin-bottom: 2%;
+}
+.social-widget article {
+  width: 100%;
+  position: relative;
+  top: -1.5em;
+  padding-left: 5%;
+}
+.social-widget article h3 {
+  font-family: "lane_-_narrowregular", Helvetica, sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  line-height: 1em;
+  color: #414042;
+}
+.social-widget article p {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: 1em;
+  color: #808080;
+  position: relative;
+  top: -0.6em;
+}
+.social-widget article img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 7%;
+  position: relative;
+  top: -0.4em;
+  -webkit-transition: color 250ms;
+  -moz-transition: color 250ms;
+  -o-transition: color 250ms;
+  transition: color 250ms;
+}
+.social-widget article img:hover {
+  opacity: 0.9;
+  -webkit-transition: opacity 250ms;
+  -moz-transition: opacity 250ms;
+  -o-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 700px) {
+  .social-widget {
+    width: 49%;
+    left: 9999px;
+    height: 0;
+  }
+  .social-widget article {
+    display: none;
+  }
+}
+.post-full {
+  width: 100%;
+  display: block;
+}
+.post-full img {
+  width: auto;
+  height: auto;
+  max-height: 500px;
+  display: block;
+  margin: 0 auto;
+  max-width: 96%;
+  border-radius: 3px;
+}
+.post-full article {
+  width: 66%;
+  margin: 0 auto;
+}
+.post-full h3 {
+  font-family: "lane_-_narrowregular", Helvetica, sans-serif;
+  font-size: 2.2em;
+  letter-spacing: 2px;
+  line-height: 1.2em;
+  color: #414042;
+  text-align: center;
+}
+.post-full h5 {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: .8em;
+  color: #808080;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  top: -1em;
+}
+.post-full p {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: 1em;
+  color: #808080;
+  line-height: 1.5em;
+  text-align: justify;
+  padding-bottom: 2%;
+}
+.post-full a {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: 0.75em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 33%;
+  padding: 2% 0;
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  background-color: #414042;
+  -webkit-transition: background-color 250ms;
+  -moz-transition: background-color 250ms;
+  -o-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+.post-full a:hover {
+  background-color: #9e760d;
+  -webkit-transition: background-color 250ms;
+  -moz-transition: background-color 250ms;
+  -o-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 740px) {
+  .post-full p {
+    text-align: left;
+  }
+  .post-full article {
+    width: 80%;
+  }
+}
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -76,7 +515,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-/* line 17, ../sass/partials/_main.scss */
 html,
 button,
 input,
@@ -85,7 +523,6 @@ textarea {
   color: #222;
 }
 
-/* line 21, ../sass/partials/_main.scss */
 html {
   font-size: 1em;
   line-height: 1.4;
@@ -96,13 +533,11 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-/* line 32, ../sass/partials/_main.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
 
-/* line 37, ../sass/partials/_main.scss */
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -111,7 +546,6 @@ html {
 /*
  * A better looking default horizontal rule
  */
-/* line 46, ../sass/partials/_main.scss */
 hr {
   display: block;
   height: 1px;
@@ -125,7 +559,6 @@ hr {
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
-/* line 63, ../sass/partials/_main.scss */
 audio,
 canvas,
 img,
@@ -136,7 +569,6 @@ video {
 /*
  * Remove default fieldset styles.
  */
-/* line 71, ../sass/partials/_main.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -146,7 +578,6 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 81, ../sass/partials/_main.scss */
 textarea {
   resize: vertical;
 }
@@ -154,7 +585,6 @@ textarea {
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
-/* line 89, ../sass/partials/_main.scss */
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -171,7 +601,6 @@ textarea {
 /*
  * Image replacement
  */
-/* line 124, ../sass/partials/_main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -180,7 +609,6 @@ textarea {
   *text-indent: -9999px;
 }
 
-/* line 132, ../sass/partials/_main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -191,7 +619,6 @@ textarea {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 143, ../sass/partials/_main.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -200,7 +627,6 @@ textarea {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 152, ../sass/partials/_main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -216,7 +642,6 @@ textarea {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 169, ../sass/partials/_main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -230,7 +655,6 @@ textarea {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 182, ../sass/partials/_main.scss */
 .invisible {
   visibility: hidden;
 }
@@ -246,7 +670,6 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 199, ../sass/partials/_main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -255,7 +678,6 @@ textarea {
   /* 2 */
 }
 
-/* line 204, ../sass/partials/_main.scss */
 .clearfix:after {
   clear: both;
 }
@@ -264,7 +686,6 @@ textarea {
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-/* line 213, ../sass/partials/_main.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -285,7 +706,6 @@ textarea {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 240, ../sass/partials/_main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -294,18 +714,15 @@ textarea {
     text-shadow: none !important;
   }
 
-  /* line 248, ../sass/partials/_main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 252, ../sass/partials/_main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 256, ../sass/partials/_main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -313,33 +730,28 @@ textarea {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 266, ../sass/partials/_main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 271, ../sass/partials/_main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 276, ../sass/partials/_main.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 281, ../sass/partials/_main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 285, ../sass/partials/_main.scss */
   img {
     max-width: 100% !important;
   }
@@ -348,7 +760,6 @@ textarea {
     margin: 0.5cm;
 }
 
-  /* line 295, ../sass/partials/_main.scss */
   p,
   h2,
   h3 {
@@ -356,7 +767,6 @@ textarea {
     widows: 3;
   }
 
-  /* line 301, ../sass/partials/_main.scss */
   h2,
   h3 {
     page-break-after: avoid;
@@ -369,7 +779,6 @@ textarea {
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 22, ../sass/partials/_normalize.scss */
 article,
 aside,
 details,
@@ -388,7 +797,6 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 32, ../sass/partials/_normalize.scss */
 audio,
 canvas,
 video {
@@ -401,7 +809,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 43, ../sass/partials/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -411,7 +818,6 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-/* line 53, ../sass/partials/_normalize.scss */
 [hidden] {
   display: none;
 }
@@ -425,7 +831,6 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 68, ../sass/partials/_normalize.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -439,7 +844,6 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-/* line 83, ../sass/partials/_normalize.scss */
 html,
 button,
 input,
@@ -451,7 +855,6 @@ textarea {
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
-/* line 91, ../sass/partials/_normalize.scss */
 body {
   margin: 0;
 }
@@ -462,7 +865,6 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 103, ../sass/partials/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -470,7 +872,6 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 112, ../sass/partials/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -484,37 +885,31 @@ a:hover {
  * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
-/* line 126, ../sass/partials/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* line 131, ../sass/partials/_normalize.scss */
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-/* line 136, ../sass/partials/_normalize.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 141, ../sass/partials/_normalize.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 146, ../sass/partials/_normalize.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-/* line 151, ../sass/partials/_normalize.scss */
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
@@ -523,7 +918,6 @@ h6 {
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-/* line 160, ../sass/partials/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -531,13 +925,11 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-/* line 169, ../sass/partials/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 173, ../sass/partials/_normalize.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -545,7 +937,6 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 181, ../sass/partials/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -554,7 +945,6 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
-/* line 190, ../sass/partials/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -564,7 +954,6 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
-/* line 200, ../sass/partials/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -573,7 +962,6 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 210, ../sass/partials/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
@@ -582,7 +970,6 @@ pre {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-/* line 221, ../sass/partials/_normalize.scss */
 code,
 kbd,
 pre,
@@ -595,7 +982,6 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 231, ../sass/partials/_normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -605,7 +991,6 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
-/* line 241, ../sass/partials/_normalize.scss */
 q {
   quotes: none;
 }
@@ -613,7 +998,6 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-/* line 250, ../sass/partials/_normalize.scss */
 q:before,
 q:after {
   content: '';
@@ -623,7 +1007,6 @@ q:after {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 259, ../sass/partials/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -631,7 +1014,6 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 268, ../sass/partials/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -640,12 +1022,10 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 275, ../sass/partials/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 279, ../sass/partials/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -656,7 +1036,6 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 294, ../sass/partials/_normalize.scss */
 dl,
 menu,
 ol,
@@ -664,7 +1043,6 @@ ul {
   margin: 1em 0;
 }
 
-/* line 298, ../sass/partials/_normalize.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -672,7 +1050,6 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-/* line 308, ../sass/partials/_normalize.scss */
 menu,
 ol,
 ul {
@@ -682,7 +1059,6 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-/* line 317, ../sass/partials/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -696,7 +1072,6 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-/* line 331, ../sass/partials/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -707,7 +1082,6 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 340, ../sass/partials/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -718,7 +1092,6 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-/* line 352, ../sass/partials/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -729,7 +1102,6 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-/* line 364, ../sass/partials/_normalize.scss */
 form {
   margin: 0;
 }
@@ -737,7 +1109,6 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 372, ../sass/partials/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -749,7 +1120,6 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 384, ../sass/partials/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -766,7 +1136,6 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-/* line 401, ../sass/partials/_normalize.scss */
 button,
 input,
 select,
@@ -785,7 +1154,6 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 414, ../sass/partials/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -797,7 +1165,6 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 426, ../sass/partials/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -812,7 +1179,6 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 443, ../sass/partials/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -828,7 +1194,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 454, ../sass/partials/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -840,7 +1205,6 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 466, ../sass/partials/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -858,7 +1222,6 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 479, ../sass/partials/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -872,7 +1235,6 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 492, ../sass/partials/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -881,7 +1243,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-/* line 501, ../sass/partials/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -892,7 +1253,6 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 511, ../sass/partials/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -906,189 +1266,9 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 524, ../sass/partials/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-/* line 15, ../sass/partials/_header.scss */
-header {
-  width: 100%;
-  padding-top: 45%;
-  background-color: red;
-  background: url("../img/ss-header.jpg") no-repeat;
-  background-size: 100%;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-transition: opacity 250ms;
-  -moz-transition: opacity 250ms;
-  -o-transition: opacity 250ms;
-  transition: opacity 250ms;
-}
-
-/* line 31, ../sass/partials/_header.scss */
-header:hover {
-  opacity: 0.9;
-  -webkit-transition: opacity 250ms;
-  -moz-transition: opacity 250ms;
-  -o-transition: opacity 250ms;
-  transition: opacity 250ms;
-}
-
-/* line 39, ../sass/partials/_header.scss */
-nav {
-  width: 100%;
-  border-bottom: 2px solid #bcbec0;
-  margin-bottom: 50px;
-  padding: 0;
-}
-/* line 45, ../sass/partials/_header.scss */
-nav ul {
-  width: 90%;
-  margin: 0 auto;
-  text-align: justify;
-  padding: 4% 0 1.5% 0;
-}
-/* line 52, ../sass/partials/_header.scss */
-nav li {
-  display: inline-block;
-}
-/* line 56, ../sass/partials/_header.scss */
-nav a {
-  line-height: 0.1em;
-  font-size: 1.3em;
-  font-family: "bebas_neueregular", Helvetica, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #414042;
-  text-decoration: none;
-  -webkit-transition: color 250ms;
-  -moz-transition: color 250ms;
-  -o-transition: color 250ms;
-  transition: color 250ms;
-}
-/* line 70, ../sass/partials/_header.scss */
-nav a:hover, nav a:active {
-  color: #9e760d;
-  -webkit-transition: color 250ms;
-  -moz-transition: color 250ms;
-  -o-transition: color 250ms;
-  transition: color 250ms;
-}
-/* line 80, ../sass/partials/_header.scss */
-nav ul.expand:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
-
-/* line 87, ../sass/partials/_header.scss */
-.collapse {
-  display: none;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 700px) {
-  /* line 96, ../sass/partials/_header.scss */
-  .expand {
-    display: none;
-    position: relative;
-    padding: 0;
-    z-index: 9999;
-    background-color: #fff;
-    width: 100%;
-    float: left;
-  }
-  /* line 105, ../sass/partials/_header.scss */
-  .expand li {
-    width: 100%;
-    background-color: #414042;
-    text-align: center;
-    padding: 3% 0;
-    margin-bottom: 2px;
-  }
-  /* line 113, ../sass/partials/_header.scss */
-  .expand a {
-    padding: 2% 0;
-    color: #fff;
-    font-size: 0.9em;
-    font-family: "Montserrat", Helvetica, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #fff;
-  }
-  /* line 123, ../sass/partials/_header.scss */
-  .expand a:hover {
-    color: #fff;
-  }
-  /* line 127, ../sass/partials/_header.scss */
-  .expand li:hover {
-    background-color: #9e760d;
-  }
-
-  /* line 132, ../sass/partials/_header.scss */
-  .open {
-    display: block;
-  }
-
-  /* line 136, ../sass/partials/_header.scss */
-  nav ul.expand:after {
-    display: none;
-  }
-
-  /* line 140, ../sass/partials/_header.scss */
-  .collapse {
-    display: block;
-    width: 100%;
-    heigth: auto;
-    padding: 2% 0;
-  }
-  /* line 146, ../sass/partials/_header.scss */
-  .collapse .collapse-nav {
-    width: 60%;
-    text-align: center;
-    border-right: 2px solid #bcbec0;
-  }
-  /* line 152, ../sass/partials/_header.scss */
-  .collapse .collapse-social {
-    width: 38%;
-  }
-  /* line 155, ../sass/partials/_header.scss */
-  .collapse .collapse-social ul {
-    padding: 0;
-  }
-  /* line 159, ../sass/partials/_header.scss */
-  .collapse .collapse-social li {
-    width: 48%;
-    text-align: center;
-  }
-
-  /* line 166, ../sass/partials/_header.scss */
-  i {
-    font-size: 3em;
-    color: #414042;
-  }
-
-  /* line 171, ../sass/partials/_header.scss */
-  i:hover {
-    color: #9e760d;
-  }
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url("fonts/montserrat-bold-webfont.eot");
-  src: url("fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/montserrat-bold-webfont.woff") format("woff"), url("fonts/montserrat-bold-webfont.ttf") format("truetype"), url("fonts/montserrat-bold-webfont.svg#Montserrat") format("svg");
-}
-
-@font-face {
-  font-family: 'droid_serifregular';
-  src: url("fonts/DroidSerif-webfont.eot");
-  src: url("fonts/DroidSerif-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DroidSerif-webfont.woff") format("woff"), url("fonts/DroidSerif-webfont.ttf") format("truetype"), url("fonts/DroidSerif-webfont.svg#droid_serifregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
@@ -1108,165 +1288,13 @@ nav ul.expand:after {
 }
 
 @font-face {
-  font-family: 'MenschRegular';
-  src: url("fonts/mensch-wf.eot");
-  src: url("fonts/mensch-wf.eot?#iefix") format("embedded-opentype"), url("fonts/mensch-wf.woff") format("woff"), url("fonts/mensch-wf.ttf") format("truetype"), url("fonts/mensch-wf.svg#MenschMenschRegular") format("svg");
+  font-family: 'lane_-_narrowregular';
+  src: url("fonts/LANENAR_-webfont.eot");
+  src: url("fonts/LANENAR_-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/LANENAR_-webfont.woff") format("woff"), url("fonts/LANENAR_-webfont.ttf") format("truetype"), url("fonts/LANENAR_-webfont.svg#lane_-_narrowregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'rbno2_lightregular';
-  src: url("fonts/rbno2light-webfont.eot");
-  src: url("fonts/rbno2light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/rbno2light-webfont.woff") format("woff"), url("fonts/rbno2light-webfont.ttf") format("truetype"), url("fonts/rbno2light-webfont.svg#rbno2_lightregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* line 16, ../sass/partials/_social.scss */
-.social-widget {
-  position: absolute;
-  left: 68%;
-  width: 32%;
-  margin-bottom: 2%;
-}
-/* line 22, ../sass/partials/_social.scss */
-.social-widget article {
-  width: 100%;
-  position: relative;
-  top: -1.5em;
-  padding-left: 5%;
-}
-/* line 28, ../sass/partials/_social.scss */
-.social-widget article h3 {
-  font-family: Baskerville;
-  font-style: italic;
-  font-size: 2.2em;
-  letter-spacing: 2px;
-  line-height: 1em;
-  color: #414042;
-}
-/* line 37, ../sass/partials/_social.scss */
-.social-widget article p {
-  font-family: "muliregular", Helvetica, sans-serif;
-  font-size: 1em;
-  color: #6D6E71;
-  position: relative;
-  top: -0.6em;
-}
-/* line 45, ../sass/partials/_social.scss */
-.social-widget article i {
-  color: #414042;
-  font-size: 3.5em;
-  float: left;
-  padding-right: 7%;
-  position: relative;
-  top: -0.4em;
-  -webkit-transition: color 250ms;
-  -moz-transition: color 250ms;
-  -o-transition: color 250ms;
-  transition: color 250ms;
-}
-/* line 59, ../sass/partials/_social.scss */
-.social-widget article i:hover {
-  color: #9e760d;
-  -webkit-transition: color 250ms;
-  -moz-transition: color 250ms;
-  -o-transition: color 250ms;
-  transition: color 250ms;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 700px) {
-  /* line 75, ../sass/partials/_social.scss */
-  .social-widget {
-    width: 49%;
-    left: 9999px;
-    height: 0;
-  }
-  /* line 80, ../sass/partials/_social.scss */
-  .social-widget article {
-    display: none;
-  }
-}
-/* line 14, ../sass/partials/_post.scss */
-.post-full {
-  width: 100%;
-  display: block;
-}
-/* line 18, ../sass/partials/_post.scss */
-.post-full img {
-  width: auto;
-  max-height: 500px;
-  display: block;
-  margin: 0 auto;
-  max-width: 96%;
-  border-radius: 3px;
-}
-/* line 27, ../sass/partials/_post.scss */
-.post-full article {
-  width: 66%;
-  margin: 0 auto;
-}
-/* line 32, ../sass/partials/_post.scss */
-.post-full h3 {
-  font-family: Baskerville;
-  font-style: italic;
-  font-size: 2.2em;
-  letter-spacing: 2px;
-  line-height: 1em;
-  color: #414042;
-  text-align: center;
-}
-/* line 42, ../sass/partials/_post.scss */
-.post-full p {
-  font-family: "muliregular", Helvetica, sans-serif;
-  font-size: 1em;
-  color: #6D6E71;
-  line-height: 1.5em;
-  text-align: justify;
-  padding-bottom: 2%;
-}
-/* line 51, ../sass/partials/_post.scss */
-.post-full a {
-  font-family: "Montserrat", Helvetica, sans-serif;
-  font-size: 0.75em;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: .15em;
-  text-align: center;
-  width: 33%;
-  padding: 2% 0;
-  border-radius: 3px;
-  display: block;
-  margin: 0 auto;
-  background-color: #414042;
-  -webkit-transition: background-color 250ms;
-  -moz-transition: background-color 250ms;
-  -o-transition: background-color 250ms;
-  transition: background-color 250ms;
-}
-/* line 73, ../sass/partials/_post.scss */
-.post-full a:hover {
-  background-color: #9e760d;
-  -webkit-transition: background-color 250ms;
-  -moz-transition: background-color 250ms;
-  -o-transition: background-color 250ms;
-  transition: background-color 250ms;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 740px) {
-  /* line 87, ../sass/partials/_post.scss */
-  .post-full p {
-    text-align: left;
-  }
-  /* line 91, ../sass/partials/_post.scss */
-  .post-full article {
-    width: 80%;
-  }
-}
 /* 
  * Foundation Icons v 3.0
  * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
@@ -1280,7 +1308,6 @@ nav ul.expand:after {
   font-style: normal;
 }
 
-/* line 300, ../sass/partials/_foundation.scss */
 .fi-address-book:before,
 .fi-alert:before,
 .fi-align-center:before,
@@ -1575,1563 +1602,1142 @@ nav ul.expand:after {
   text-decoration: inherit;
 }
 
-/* line 312, ../sass/partials/_foundation.scss */
 .fi-address-book:before {
   content: "\f100";
 }
 
-/* line 313, ../sass/partials/_foundation.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 314, ../sass/partials/_foundation.scss */
 .fi-align-center:before {
   content: "\f102";
 }
 
-/* line 315, ../sass/partials/_foundation.scss */
 .fi-align-justify:before {
   content: "\f103";
 }
 
-/* line 316, ../sass/partials/_foundation.scss */
 .fi-align-left:before {
   content: "\f104";
 }
 
-/* line 317, ../sass/partials/_foundation.scss */
 .fi-align-right:before {
   content: "\f105";
 }
 
-/* line 318, ../sass/partials/_foundation.scss */
 .fi-anchor:before {
   content: "\f106";
 }
 
-/* line 319, ../sass/partials/_foundation.scss */
 .fi-annotate:before {
   content: "\f107";
 }
 
-/* line 320, ../sass/partials/_foundation.scss */
 .fi-archive:before {
   content: "\f108";
 }
 
-/* line 321, ../sass/partials/_foundation.scss */
 .fi-arrow-down:before {
   content: "\f109";
 }
 
-/* line 322, ../sass/partials/_foundation.scss */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 323, ../sass/partials/_foundation.scss */
 .fi-arrow-right:before {
   content: "\f10b";
 }
 
-/* line 324, ../sass/partials/_foundation.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 325, ../sass/partials/_foundation.scss */
 .fi-arrows-compress:before {
   content: "\f10d";
 }
 
-/* line 326, ../sass/partials/_foundation.scss */
 .fi-arrows-expand:before {
   content: "\f10e";
 }
 
-/* line 327, ../sass/partials/_foundation.scss */
 .fi-arrows-in:before {
   content: "\f10f";
 }
 
-/* line 328, ../sass/partials/_foundation.scss */
 .fi-arrows-out:before {
   content: "\f110";
 }
 
-/* line 329, ../sass/partials/_foundation.scss */
 .fi-asl:before {
   content: "\f111";
 }
 
-/* line 330, ../sass/partials/_foundation.scss */
 .fi-asterisk:before {
   content: "\f112";
 }
 
-/* line 331, ../sass/partials/_foundation.scss */
 .fi-at-sign:before {
   content: "\f113";
 }
 
-/* line 332, ../sass/partials/_foundation.scss */
 .fi-background-color:before {
   content: "\f114";
 }
 
-/* line 333, ../sass/partials/_foundation.scss */
 .fi-battery-empty:before {
   content: "\f115";
 }
 
-/* line 334, ../sass/partials/_foundation.scss */
 .fi-battery-full:before {
   content: "\f116";
 }
 
-/* line 335, ../sass/partials/_foundation.scss */
 .fi-battery-half:before {
   content: "\f117";
 }
 
-/* line 336, ../sass/partials/_foundation.scss */
 .fi-bitcoin-circle:before {
   content: "\f118";
 }
 
-/* line 337, ../sass/partials/_foundation.scss */
 .fi-bitcoin:before {
   content: "\f119";
 }
 
-/* line 338, ../sass/partials/_foundation.scss */
 .fi-blind:before {
   content: "\f11a";
 }
 
-/* line 339, ../sass/partials/_foundation.scss */
 .fi-bluetooth:before {
   content: "\f11b";
 }
 
-/* line 340, ../sass/partials/_foundation.scss */
 .fi-bold:before {
   content: "\f11c";
 }
 
-/* line 341, ../sass/partials/_foundation.scss */
 .fi-book-bookmark:before {
   content: "\f11d";
 }
 
-/* line 342, ../sass/partials/_foundation.scss */
 .fi-book:before {
   content: "\f11e";
 }
 
-/* line 343, ../sass/partials/_foundation.scss */
 .fi-bookmark:before {
   content: "\f11f";
 }
 
-/* line 344, ../sass/partials/_foundation.scss */
 .fi-braille:before {
   content: "\f120";
 }
 
-/* line 345, ../sass/partials/_foundation.scss */
 .fi-burst-new:before {
   content: "\f121";
 }
 
-/* line 346, ../sass/partials/_foundation.scss */
 .fi-burst-sale:before {
   content: "\f122";
 }
 
-/* line 347, ../sass/partials/_foundation.scss */
 .fi-burst:before {
   content: "\f123";
 }
 
-/* line 348, ../sass/partials/_foundation.scss */
 .fi-calendar:before {
   content: "\f124";
 }
 
-/* line 349, ../sass/partials/_foundation.scss */
 .fi-camera:before {
   content: "\f125";
 }
 
-/* line 350, ../sass/partials/_foundation.scss */
 .fi-check:before {
   content: "\f126";
 }
 
-/* line 351, ../sass/partials/_foundation.scss */
 .fi-checkbox:before {
   content: "\f127";
 }
 
-/* line 352, ../sass/partials/_foundation.scss */
 .fi-clipboard-notes:before {
   content: "\f128";
 }
 
-/* line 353, ../sass/partials/_foundation.scss */
 .fi-clipboard-pencil:before {
   content: "\f129";
 }
 
-/* line 354, ../sass/partials/_foundation.scss */
 .fi-clipboard:before {
   content: "\f12a";
 }
 
-/* line 355, ../sass/partials/_foundation.scss */
 .fi-clock:before {
   content: "\f12b";
 }
 
-/* line 356, ../sass/partials/_foundation.scss */
 .fi-closed-caption:before {
   content: "\f12c";
 }
 
-/* line 357, ../sass/partials/_foundation.scss */
 .fi-cloud:before {
   content: "\f12d";
 }
 
-/* line 358, ../sass/partials/_foundation.scss */
 .fi-comment-minus:before {
   content: "\f12e";
 }
 
-/* line 359, ../sass/partials/_foundation.scss */
 .fi-comment-quotes:before {
   content: "\f12f";
 }
 
-/* line 360, ../sass/partials/_foundation.scss */
 .fi-comment-video:before {
   content: "\f130";
 }
 
-/* line 361, ../sass/partials/_foundation.scss */
 .fi-comment:before {
   content: "\f131";
 }
 
-/* line 362, ../sass/partials/_foundation.scss */
 .fi-comments:before {
   content: "\f132";
 }
 
-/* line 363, ../sass/partials/_foundation.scss */
 .fi-compass:before {
   content: "\f133";
 }
 
-/* line 364, ../sass/partials/_foundation.scss */
 .fi-contrast:before {
   content: "\f134";
 }
 
-/* line 365, ../sass/partials/_foundation.scss */
 .fi-credit-card:before {
   content: "\f135";
 }
 
-/* line 366, ../sass/partials/_foundation.scss */
 .fi-crop:before {
   content: "\f136";
 }
 
-/* line 367, ../sass/partials/_foundation.scss */
 .fi-crown:before {
   content: "\f137";
 }
 
-/* line 368, ../sass/partials/_foundation.scss */
 .fi-css3:before {
   content: "\f138";
 }
 
-/* line 369, ../sass/partials/_foundation.scss */
 .fi-database:before {
   content: "\f139";
 }
 
-/* line 370, ../sass/partials/_foundation.scss */
 .fi-die-five:before {
   content: "\f13a";
 }
 
-/* line 371, ../sass/partials/_foundation.scss */
 .fi-die-four:before {
   content: "\f13b";
 }
 
-/* line 372, ../sass/partials/_foundation.scss */
 .fi-die-one:before {
   content: "\f13c";
 }
 
-/* line 373, ../sass/partials/_foundation.scss */
 .fi-die-six:before {
   content: "\f13d";
 }
 
-/* line 374, ../sass/partials/_foundation.scss */
 .fi-die-three:before {
   content: "\f13e";
 }
 
-/* line 375, ../sass/partials/_foundation.scss */
 .fi-die-two:before {
   content: "\f13f";
 }
 
-/* line 376, ../sass/partials/_foundation.scss */
 .fi-dislike:before {
   content: "\f140";
 }
 
-/* line 377, ../sass/partials/_foundation.scss */
 .fi-dollar-bill:before {
   content: "\f141";
 }
 
-/* line 378, ../sass/partials/_foundation.scss */
 .fi-dollar:before {
   content: "\f142";
 }
 
-/* line 379, ../sass/partials/_foundation.scss */
 .fi-download:before {
   content: "\f143";
 }
 
-/* line 380, ../sass/partials/_foundation.scss */
 .fi-eject:before {
   content: "\f144";
 }
 
-/* line 381, ../sass/partials/_foundation.scss */
 .fi-elevator:before {
   content: "\f145";
 }
 
-/* line 382, ../sass/partials/_foundation.scss */
 .fi-euro:before {
   content: "\f146";
 }
 
-/* line 383, ../sass/partials/_foundation.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 384, ../sass/partials/_foundation.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 385, ../sass/partials/_foundation.scss */
 .fi-female-symbol:before {
   content: "\f149";
 }
 
-/* line 386, ../sass/partials/_foundation.scss */
 .fi-female:before {
   content: "\f14a";
 }
 
-/* line 387, ../sass/partials/_foundation.scss */
 .fi-filter:before {
   content: "\f14b";
 }
 
-/* line 388, ../sass/partials/_foundation.scss */
 .fi-first-aid:before {
   content: "\f14c";
 }
 
-/* line 389, ../sass/partials/_foundation.scss */
 .fi-flag:before {
   content: "\f14d";
 }
 
-/* line 390, ../sass/partials/_foundation.scss */
 .fi-folder-add:before {
   content: "\f14e";
 }
 
-/* line 391, ../sass/partials/_foundation.scss */
 .fi-folder-lock:before {
   content: "\f14f";
 }
 
-/* line 392, ../sass/partials/_foundation.scss */
 .fi-folder:before {
   content: "\f150";
 }
 
-/* line 393, ../sass/partials/_foundation.scss */
 .fi-foot:before {
   content: "\f151";
 }
 
-/* line 394, ../sass/partials/_foundation.scss */
 .fi-foundation:before {
   content: "\f152";
 }
 
-/* line 395, ../sass/partials/_foundation.scss */
 .fi-graph-bar:before {
   content: "\f153";
 }
 
-/* line 396, ../sass/partials/_foundation.scss */
 .fi-graph-horizontal:before {
   content: "\f154";
 }
 
-/* line 397, ../sass/partials/_foundation.scss */
 .fi-graph-pie:before {
   content: "\f155";
 }
 
-/* line 398, ../sass/partials/_foundation.scss */
 .fi-graph-trend:before {
   content: "\f156";
 }
 
-/* line 399, ../sass/partials/_foundation.scss */
 .fi-guide-dog:before {
   content: "\f157";
 }
 
-/* line 400, ../sass/partials/_foundation.scss */
 .fi-hearing-aid:before {
   content: "\f158";
 }
 
-/* line 401, ../sass/partials/_foundation.scss */
 .fi-heart:before {
   content: "\f159";
 }
 
-/* line 402, ../sass/partials/_foundation.scss */
 .fi-home:before {
   content: "\f15a";
 }
 
-/* line 403, ../sass/partials/_foundation.scss */
 .fi-html5:before {
   content: "\f15b";
 }
 
-/* line 404, ../sass/partials/_foundation.scss */
 .fi-indent-less:before {
   content: "\f15c";
 }
 
-/* line 405, ../sass/partials/_foundation.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 406, ../sass/partials/_foundation.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 407, ../sass/partials/_foundation.scss */
 .fi-italic:before {
   content: "\f15f";
 }
 
-/* line 408, ../sass/partials/_foundation.scss */
 .fi-key:before {
   content: "\f160";
 }
 
-/* line 409, ../sass/partials/_foundation.scss */
 .fi-laptop:before {
   content: "\f161";
 }
 
-/* line 410, ../sass/partials/_foundation.scss */
 .fi-layout:before {
   content: "\f162";
 }
 
-/* line 411, ../sass/partials/_foundation.scss */
 .fi-lightbulb:before {
   content: "\f163";
 }
 
-/* line 412, ../sass/partials/_foundation.scss */
 .fi-like:before {
   content: "\f164";
 }
 
-/* line 413, ../sass/partials/_foundation.scss */
 .fi-link:before {
   content: "\f165";
 }
 
-/* line 414, ../sass/partials/_foundation.scss */
 .fi-list-bullet:before {
   content: "\f166";
 }
 
-/* line 415, ../sass/partials/_foundation.scss */
 .fi-list-number:before {
   content: "\f167";
 }
 
-/* line 416, ../sass/partials/_foundation.scss */
 .fi-list-thumbnails:before {
   content: "\f168";
 }
 
-/* line 417, ../sass/partials/_foundation.scss */
 .fi-list:before {
   content: "\f169";
 }
 
-/* line 418, ../sass/partials/_foundation.scss */
 .fi-lock:before {
   content: "\f16a";
 }
 
-/* line 419, ../sass/partials/_foundation.scss */
 .fi-loop:before {
   content: "\f16b";
 }
 
-/* line 420, ../sass/partials/_foundation.scss */
 .fi-magnifying-glass:before {
   content: "\f16c";
 }
 
-/* line 421, ../sass/partials/_foundation.scss */
 .fi-mail:before {
   content: "\f16d";
 }
 
-/* line 422, ../sass/partials/_foundation.scss */
 .fi-male-female:before {
   content: "\f16e";
 }
 
-/* line 423, ../sass/partials/_foundation.scss */
 .fi-male-symbol:before {
   content: "\f16f";
 }
 
-/* line 424, ../sass/partials/_foundation.scss */
 .fi-male:before {
   content: "\f170";
 }
 
-/* line 425, ../sass/partials/_foundation.scss */
 .fi-map:before {
   content: "\f171";
 }
 
-/* line 426, ../sass/partials/_foundation.scss */
 .fi-marker:before {
   content: "\f172";
 }
 
-/* line 427, ../sass/partials/_foundation.scss */
 .fi-megaphone:before {
   content: "\f173";
 }
 
-/* line 428, ../sass/partials/_foundation.scss */
 .fi-microphone:before {
   content: "\f174";
 }
 
-/* line 429, ../sass/partials/_foundation.scss */
 .fi-minus-circle:before {
   content: "\f175";
 }
 
-/* line 430, ../sass/partials/_foundation.scss */
 .fi-minus:before {
   content: "\f176";
 }
 
-/* line 431, ../sass/partials/_foundation.scss */
 .fi-mobile-signal:before {
   content: "\f177";
 }
 
-/* line 432, ../sass/partials/_foundation.scss */
 .fi-mobile:before {
   content: "\f178";
 }
 
-/* line 433, ../sass/partials/_foundation.scss */
 .fi-monitor:before {
   content: "\f179";
 }
 
-/* line 434, ../sass/partials/_foundation.scss */
 .fi-mountains:before {
   content: "\f17a";
 }
 
-/* line 435, ../sass/partials/_foundation.scss */
 .fi-music:before {
   content: "\f17b";
 }
 
-/* line 436, ../sass/partials/_foundation.scss */
 .fi-next:before {
   content: "\f17c";
 }
 
-/* line 437, ../sass/partials/_foundation.scss */
 .fi-no-dogs:before {
   content: "\f17d";
 }
 
-/* line 438, ../sass/partials/_foundation.scss */
 .fi-no-smoking:before {
   content: "\f17e";
 }
 
-/* line 439, ../sass/partials/_foundation.scss */
 .fi-page-add:before {
   content: "\f17f";
 }
 
-/* line 440, ../sass/partials/_foundation.scss */
 .fi-page-copy:before {
   content: "\f180";
 }
 
-/* line 441, ../sass/partials/_foundation.scss */
 .fi-page-csv:before {
   content: "\f181";
 }
 
-/* line 442, ../sass/partials/_foundation.scss */
 .fi-page-delete:before {
   content: "\f182";
 }
 
-/* line 443, ../sass/partials/_foundation.scss */
 .fi-page-doc:before {
   content: "\f183";
 }
 
-/* line 444, ../sass/partials/_foundation.scss */
 .fi-page-edit:before {
   content: "\f184";
 }
 
-/* line 445, ../sass/partials/_foundation.scss */
 .fi-page-export-csv:before {
   content: "\f185";
 }
 
-/* line 446, ../sass/partials/_foundation.scss */
 .fi-page-export-doc:before {
   content: "\f186";
 }
 
-/* line 447, ../sass/partials/_foundation.scss */
 .fi-page-export-pdf:before {
   content: "\f187";
 }
 
-/* line 448, ../sass/partials/_foundation.scss */
 .fi-page-export:before {
   content: "\f188";
 }
 
-/* line 449, ../sass/partials/_foundation.scss */
 .fi-page-filled:before {
   content: "\f189";
 }
 
-/* line 450, ../sass/partials/_foundation.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 451, ../sass/partials/_foundation.scss */
 .fi-page-pdf:before {
   content: "\f18b";
 }
 
-/* line 452, ../sass/partials/_foundation.scss */
 .fi-page-remove:before {
   content: "\f18c";
 }
 
-/* line 453, ../sass/partials/_foundation.scss */
 .fi-page-search:before {
   content: "\f18d";
 }
 
-/* line 454, ../sass/partials/_foundation.scss */
 .fi-page:before {
   content: "\f18e";
 }
 
-/* line 455, ../sass/partials/_foundation.scss */
 .fi-paint-bucket:before {
   content: "\f18f";
 }
 
-/* line 456, ../sass/partials/_foundation.scss */
 .fi-paperclip:before {
   content: "\f190";
 }
 
-/* line 457, ../sass/partials/_foundation.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 458, ../sass/partials/_foundation.scss */
 .fi-paw:before {
   content: "\f192";
 }
 
-/* line 459, ../sass/partials/_foundation.scss */
 .fi-paypal:before {
   content: "\f193";
 }
 
-/* line 460, ../sass/partials/_foundation.scss */
 .fi-pencil:before {
   content: "\f194";
 }
 
-/* line 461, ../sass/partials/_foundation.scss */
 .fi-photo:before {
   content: "\f195";
 }
 
-/* line 462, ../sass/partials/_foundation.scss */
 .fi-play-circle:before {
   content: "\f196";
 }
 
-/* line 463, ../sass/partials/_foundation.scss */
 .fi-play-video:before {
   content: "\f197";
 }
 
-/* line 464, ../sass/partials/_foundation.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 465, ../sass/partials/_foundation.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 466, ../sass/partials/_foundation.scss */
 .fi-pound:before {
   content: "\f19a";
 }
 
-/* line 467, ../sass/partials/_foundation.scss */
 .fi-power:before {
   content: "\f19b";
 }
 
-/* line 468, ../sass/partials/_foundation.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 469, ../sass/partials/_foundation.scss */
 .fi-price-tag:before {
   content: "\f19d";
 }
 
-/* line 470, ../sass/partials/_foundation.scss */
 .fi-pricetag-multiple:before {
   content: "\f19e";
 }
 
-/* line 471, ../sass/partials/_foundation.scss */
 .fi-print:before {
   content: "\f19f";
 }
 
-/* line 472, ../sass/partials/_foundation.scss */
 .fi-prohibited:before {
   content: "\f1a0";
 }
 
-/* line 473, ../sass/partials/_foundation.scss */
 .fi-projection-screen:before {
   content: "\f1a1";
 }
 
-/* line 474, ../sass/partials/_foundation.scss */
 .fi-puzzle:before {
   content: "\f1a2";
 }
 
-/* line 475, ../sass/partials/_foundation.scss */
 .fi-quote:before {
   content: "\f1a3";
 }
 
-/* line 476, ../sass/partials/_foundation.scss */
 .fi-record:before {
   content: "\f1a4";
 }
 
-/* line 477, ../sass/partials/_foundation.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 478, ../sass/partials/_foundation.scss */
 .fi-results-demographics:before {
   content: "\f1a6";
 }
 
-/* line 479, ../sass/partials/_foundation.scss */
 .fi-results:before {
   content: "\f1a7";
 }
 
-/* line 480, ../sass/partials/_foundation.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 481, ../sass/partials/_foundation.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 482, ../sass/partials/_foundation.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 483, ../sass/partials/_foundation.scss */
 .fi-safety-cone:before {
   content: "\f1ab";
 }
 
-/* line 484, ../sass/partials/_foundation.scss */
 .fi-save:before {
   content: "\f1ac";
 }
 
-/* line 485, ../sass/partials/_foundation.scss */
 .fi-share:before {
   content: "\f1ad";
 }
 
-/* line 486, ../sass/partials/_foundation.scss */
 .fi-sheriff-badge:before {
   content: "\f1ae";
 }
 
-/* line 487, ../sass/partials/_foundation.scss */
 .fi-shield:before {
   content: "\f1af";
 }
 
-/* line 488, ../sass/partials/_foundation.scss */
 .fi-shopping-bag:before {
   content: "\f1b0";
 }
 
-/* line 489, ../sass/partials/_foundation.scss */
 .fi-shopping-cart:before {
   content: "\f1b1";
 }
 
-/* line 490, ../sass/partials/_foundation.scss */
 .fi-shuffle:before {
   content: "\f1b2";
 }
 
-/* line 491, ../sass/partials/_foundation.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 492, ../sass/partials/_foundation.scss */
 .fi-social-500px:before {
   content: "\f1b4";
 }
 
-/* line 493, ../sass/partials/_foundation.scss */
 .fi-social-adobe:before {
   content: "\f1b5";
 }
 
-/* line 494, ../sass/partials/_foundation.scss */
 .fi-social-amazon:before {
   content: "\f1b6";
 }
 
-/* line 495, ../sass/partials/_foundation.scss */
 .fi-social-android:before {
   content: "\f1b7";
 }
 
-/* line 496, ../sass/partials/_foundation.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 497, ../sass/partials/_foundation.scss */
 .fi-social-behance:before {
   content: "\f1b9";
 }
 
-/* line 498, ../sass/partials/_foundation.scss */
 .fi-social-bing:before {
   content: "\f1ba";
 }
 
-/* line 499, ../sass/partials/_foundation.scss */
 .fi-social-blogger:before {
   content: "\f1bb";
 }
 
-/* line 500, ../sass/partials/_foundation.scss */
 .fi-social-delicious:before {
   content: "\f1bc";
 }
 
-/* line 501, ../sass/partials/_foundation.scss */
 .fi-social-designer-news:before {
   content: "\f1bd";
 }
 
-/* line 502, ../sass/partials/_foundation.scss */
 .fi-social-deviant-art:before {
   content: "\f1be";
 }
 
-/* line 503, ../sass/partials/_foundation.scss */
 .fi-social-digg:before {
   content: "\f1bf";
 }
 
-/* line 504, ../sass/partials/_foundation.scss */
 .fi-social-dribbble:before {
   content: "\f1c0";
 }
 
-/* line 505, ../sass/partials/_foundation.scss */
 .fi-social-drive:before {
   content: "\f1c1";
 }
 
-/* line 506, ../sass/partials/_foundation.scss */
 .fi-social-dropbox:before {
   content: "\f1c2";
 }
 
-/* line 507, ../sass/partials/_foundation.scss */
 .fi-social-evernote:before {
   content: "\f1c3";
 }
 
-/* line 508, ../sass/partials/_foundation.scss */
 .fi-social-facebook:before {
   content: "\f1c4";
 }
 
-/* line 509, ../sass/partials/_foundation.scss */
 .fi-social-flickr:before {
   content: "\f1c5";
 }
 
-/* line 510, ../sass/partials/_foundation.scss */
 .fi-social-forrst:before {
   content: "\f1c6";
 }
 
-/* line 511, ../sass/partials/_foundation.scss */
 .fi-social-foursquare:before {
   content: "\f1c7";
 }
 
-/* line 512, ../sass/partials/_foundation.scss */
 .fi-social-game-center:before {
   content: "\f1c8";
 }
 
-/* line 513, ../sass/partials/_foundation.scss */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 514, ../sass/partials/_foundation.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 515, ../sass/partials/_foundation.scss */
 .fi-social-hacker-news:before {
   content: "\f1cb";
 }
 
-/* line 516, ../sass/partials/_foundation.scss */
 .fi-social-hi5:before {
   content: "\f1cc";
 }
 
-/* line 517, ../sass/partials/_foundation.scss */
 .fi-social-instagram:before {
   content: "\f1cd";
 }
 
-/* line 518, ../sass/partials/_foundation.scss */
 .fi-social-joomla:before {
   content: "\f1ce";
 }
 
-/* line 519, ../sass/partials/_foundation.scss */
 .fi-social-lastfm:before {
   content: "\f1cf";
 }
 
-/* line 520, ../sass/partials/_foundation.scss */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 521, ../sass/partials/_foundation.scss */
 .fi-social-medium:before {
   content: "\f1d1";
 }
 
-/* line 522, ../sass/partials/_foundation.scss */
 .fi-social-myspace:before {
   content: "\f1d2";
 }
 
-/* line 523, ../sass/partials/_foundation.scss */
 .fi-social-orkut:before {
   content: "\f1d3";
 }
 
-/* line 524, ../sass/partials/_foundation.scss */
 .fi-social-path:before {
   content: "\f1d4";
 }
 
-/* line 525, ../sass/partials/_foundation.scss */
 .fi-social-picasa:before {
   content: "\f1d5";
 }
 
-/* line 526, ../sass/partials/_foundation.scss */
 .fi-social-pinterest:before {
   content: "\f1d6";
 }
 
-/* line 527, ../sass/partials/_foundation.scss */
 .fi-social-rdio:before {
   content: "\f1d7";
 }
 
-/* line 528, ../sass/partials/_foundation.scss */
 .fi-social-reddit:before {
   content: "\f1d8";
 }
 
-/* line 529, ../sass/partials/_foundation.scss */
 .fi-social-skillshare:before {
   content: "\f1d9";
 }
 
-/* line 530, ../sass/partials/_foundation.scss */
 .fi-social-skype:before {
   content: "\f1da";
 }
 
-/* line 531, ../sass/partials/_foundation.scss */
 .fi-social-smashing-mag:before {
   content: "\f1db";
 }
 
-/* line 532, ../sass/partials/_foundation.scss */
 .fi-social-snapchat:before {
   content: "\f1dc";
 }
 
-/* line 533, ../sass/partials/_foundation.scss */
 .fi-social-spotify:before {
   content: "\f1dd";
 }
 
-/* line 534, ../sass/partials/_foundation.scss */
 .fi-social-squidoo:before {
   content: "\f1de";
 }
 
-/* line 535, ../sass/partials/_foundation.scss */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 536, ../sass/partials/_foundation.scss */
 .fi-social-steam:before {
   content: "\f1e0";
 }
 
-/* line 537, ../sass/partials/_foundation.scss */
 .fi-social-stumbleupon:before {
   content: "\f1e1";
 }
 
-/* line 538, ../sass/partials/_foundation.scss */
 .fi-social-treehouse:before {
   content: "\f1e2";
 }
 
-/* line 539, ../sass/partials/_foundation.scss */
 .fi-social-tumblr:before {
   content: "\f1e3";
 }
 
-/* line 540, ../sass/partials/_foundation.scss */
 .fi-social-twitter:before {
   content: "\f1e4";
 }
 
-/* line 541, ../sass/partials/_foundation.scss */
 .fi-social-vimeo:before {
   content: "\f1e5";
 }
 
-/* line 542, ../sass/partials/_foundation.scss */
 .fi-social-windows:before {
   content: "\f1e6";
 }
 
-/* line 543, ../sass/partials/_foundation.scss */
 .fi-social-xbox:before {
   content: "\f1e7";
 }
 
-/* line 544, ../sass/partials/_foundation.scss */
 .fi-social-yahoo:before {
   content: "\f1e8";
 }
 
-/* line 545, ../sass/partials/_foundation.scss */
 .fi-social-yelp:before {
   content: "\f1e9";
 }
 
-/* line 546, ../sass/partials/_foundation.scss */
 .fi-social-youtube:before {
   content: "\f1ea";
 }
 
-/* line 547, ../sass/partials/_foundation.scss */
 .fi-social-zerply:before {
   content: "\f1eb";
 }
 
-/* line 548, ../sass/partials/_foundation.scss */
 .fi-social-zurb:before {
   content: "\f1ec";
 }
 
-/* line 549, ../sass/partials/_foundation.scss */
 .fi-sound:before {
   content: "\f1ed";
 }
 
-/* line 550, ../sass/partials/_foundation.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 551, ../sass/partials/_foundation.scss */
 .fi-stop:before {
   content: "\f1ef";
 }
 
-/* line 552, ../sass/partials/_foundation.scss */
 .fi-strikethrough:before {
   content: "\f1f0";
 }
 
-/* line 553, ../sass/partials/_foundation.scss */
 .fi-subscript:before {
   content: "\f1f1";
 }
 
-/* line 554, ../sass/partials/_foundation.scss */
 .fi-superscript:before {
   content: "\f1f2";
 }
 
-/* line 555, ../sass/partials/_foundation.scss */
 .fi-tablet-landscape:before {
   content: "\f1f3";
 }
 
-/* line 556, ../sass/partials/_foundation.scss */
 .fi-tablet-portrait:before {
   content: "\f1f4";
 }
 
-/* line 557, ../sass/partials/_foundation.scss */
 .fi-target-two:before {
   content: "\f1f5";
 }
 
-/* line 558, ../sass/partials/_foundation.scss */
 .fi-target:before {
   content: "\f1f6";
 }
 
-/* line 559, ../sass/partials/_foundation.scss */
 .fi-telephone-accessible:before {
   content: "\f1f7";
 }
 
-/* line 560, ../sass/partials/_foundation.scss */
 .fi-telephone:before {
   content: "\f1f8";
 }
 
-/* line 561, ../sass/partials/_foundation.scss */
 .fi-text-color:before {
   content: "\f1f9";
 }
 
-/* line 562, ../sass/partials/_foundation.scss */
 .fi-thumbnails:before {
   content: "\f1fa";
 }
 
-/* line 563, ../sass/partials/_foundation.scss */
 .fi-ticket:before {
   content: "\f1fb";
 }
 
-/* line 564, ../sass/partials/_foundation.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 565, ../sass/partials/_foundation.scss */
 .fi-torso-female:before {
   content: "\f1fd";
 }
 
-/* line 566, ../sass/partials/_foundation.scss */
 .fi-torso:before {
   content: "\f1fe";
 }
 
-/* line 567, ../sass/partials/_foundation.scss */
 .fi-torsos-all-female:before {
   content: "\f1ff";
 }
 
-/* line 568, ../sass/partials/_foundation.scss */
 .fi-torsos-all:before {
   content: "\f200";
 }
 
-/* line 569, ../sass/partials/_foundation.scss */
 .fi-torsos-female-male:before {
   content: "\f201";
 }
 
-/* line 570, ../sass/partials/_foundation.scss */
 .fi-torsos-male-female:before {
   content: "\f202";
 }
 
-/* line 571, ../sass/partials/_foundation.scss */
 .fi-torsos:before {
   content: "\f203";
 }
 
-/* line 572, ../sass/partials/_foundation.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 573, ../sass/partials/_foundation.scss */
 .fi-trees:before {
   content: "\f205";
 }
 
-/* line 574, ../sass/partials/_foundation.scss */
 .fi-trophy:before {
   content: "\f206";
 }
 
-/* line 575, ../sass/partials/_foundation.scss */
 .fi-underline:before {
   content: "\f207";
 }
 
-/* line 576, ../sass/partials/_foundation.scss */
 .fi-universal-access:before {
   content: "\f208";
 }
 
-/* line 577, ../sass/partials/_foundation.scss */
 .fi-unlink:before {
   content: "\f209";
 }
 
-/* line 578, ../sass/partials/_foundation.scss */
 .fi-unlock:before {
   content: "\f20a";
 }
 
-/* line 579, ../sass/partials/_foundation.scss */
 .fi-upload-cloud:before {
   content: "\f20b";
 }
 
-/* line 580, ../sass/partials/_foundation.scss */
 .fi-upload:before {
   content: "\f20c";
 }
 
-/* line 581, ../sass/partials/_foundation.scss */
 .fi-usb:before {
   content: "\f20d";
 }
 
-/* line 582, ../sass/partials/_foundation.scss */
 .fi-video:before {
   content: "\f20e";
 }
 
-/* line 583, ../sass/partials/_foundation.scss */
 .fi-volume-none:before {
   content: "\f20f";
 }
 
-/* line 584, ../sass/partials/_foundation.scss */
 .fi-volume-strike:before {
   content: "\f210";
 }
 
-/* line 585, ../sass/partials/_foundation.scss */
 .fi-volume:before {
   content: "\f211";
 }
 
-/* line 586, ../sass/partials/_foundation.scss */
 .fi-web:before {
   content: "\f212";
 }
 
-/* line 587, ../sass/partials/_foundation.scss */
 .fi-wheelchair:before {
   content: "\f213";
 }
 
-/* line 588, ../sass/partials/_foundation.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 589, ../sass/partials/_foundation.scss */
 .fi-wrench:before {
   content: "\f215";
 }
 
-/* line 590, ../sass/partials/_foundation.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 591, ../sass/partials/_foundation.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 592, ../sass/partials/_foundation.scss */
 .fi-yen:before {
   content: "\f218";
 }
 
-/* line 593, ../sass/partials/_foundation.scss */
 .fi-zoom-in:before {
   content: "\f219";
 }
 
-/* line 594, ../sass/partials/_foundation.scss */
 .fi-zoom-out:before {
   content: "\f21a";
 }
 
-/* line 14, ../sass/partials/_grid.scss */
-#content {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-
-/* line 21, ../sass/partials/_grid.scss */
-.post {
-  width: 31.9%;
-  margin-bottom: 2%;
-  background-color: white;
-  background-size: 100%;
-  border-radius: 3px;
-  overflow: hidden;
-  text-align: center;
-  /* TEXT LINK UNDER COPY OPTION 
-   	a {
-   		font-family: $Montserrat;
-   		font-size: .8em;
-   		color: $black;
-   		text-decoration: none;
-   		text-transform: uppercase;
-   		letter-spacing: .2em;
-   		position: relative;
-   		top: -2em;
-   	}
-  
-   	a:hover {
-   		color: $gold;
-   	}*/
-  /* BOTTOM BUTTON LINK OPTION */
-}
-/* line 30, ../sass/partials/_grid.scss */
-.post img {
-  width: 100%;
-  height: auto;
-}
-/* line 35, ../sass/partials/_grid.scss */
-.post article {
-  display: none;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  padding: 10px 0;
-  text-align: center;
-}
-/* line 43, ../sass/partials/_grid.scss */
-.post article img {
-  display: none;
-}
-/* line 48, ../sass/partials/_grid.scss */
-.post h3 {
-  font-family: Baskerville;
-  font-style: italic;
-  font-size: 1.7em;
-  letter-spacing: 2px;
-  color: #414042;
-}
-/* line 56, ../sass/partials/_grid.scss */
-.post p {
-  font-family: "muliregular", Helvetica, sans-serif;
-  font-size: 1em;
-  color: #6D6E71;
-  position: relative;
-  top: -1em;
-}
-/* line 81, ../sass/partials/_grid.scss */
-.post a.button {
-  font-size: 0.75em;
-  font-family: "Montserrat", Helvetica, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #fff;
-  background-color: #414042;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: .15em;
-  text-align: center;
-  width: 100%;
-  padding: 5% 0;
-  display: block;
-  display: none;
-  position: absolute;
-  bottom: 0;
-  -webkit-transition: background-color 250ms;
-  -moz-transition: background-color 250ms;
-  -o-transition: background-color 250ms;
-  transition: background-color 250ms;
-}
-/* line 105, ../sass/partials/_grid.scss */
-.post a.button:hover {
-  background-color: #9e760d;
-  -webkit-transition: background-color 250ms;
-  -moz-transition: background-color 250ms;
-  -o-transition: background-color 250ms;
-  transition: background-color 250ms;
-}
-
-/* line 114, ../sass/partials/_grid.scss */
-.post:hover {
-  -webkit-box-shadow: inset 0px 0px 0px 2px #bcbec0;
-  -moz-box-shadow: inset 0px 0px 0px 2px #bcbec0;
-  box-shadow: inset 0px 0px 0px 2px #bcbec0;
-}
-
-/* line 120, ../sass/partials/_grid.scss */
-.post:hover img {
-  opacity: 0;
-}
-
-/* line 124, ../sass/partials/_grid.scss */
-.post:hover article, .post:hover a {
-  display: block;
-}
-
-/* line 128, ../sass/partials/_grid.scss */
-.gutter-sizer {
-  width: 2%;
-}
-
-/* MEDIA QUERIES */
-@media (max-width: 960px) {
-  /* line 137, ../sass/partials/_grid.scss */
-  #content {
-    width: 96%;
-  }
-}
-@media (max-width: 700px) {
-  /* line 145, ../sass/partials/_grid.scss */
-  .post {
-    width: 49%;
-    margin-bottom: 2%;
-  }
-}
-/* line 30, ../sass/screen.scss */
 body {
   background-color: #E5E5E5;
 }
 
-/* line 34, ../sass/screen.scss */
 #wrapper {
   width: 100%;
   max-width: 960px;
@@ -3140,18 +2746,15 @@ body {
   background-color: #f6f6f6;
 }
 
-/* line 42, ../sass/screen.scss */
 .container {
   width: 100%;
 }
 
-/* line 46, ../sass/screen.scss */
 .clear {
   clear: both;
   width: 100%;
 }
 
-/* line 51, ../sass/screen.scss */
 .spacer {
   margin: 50px 0;
   border-bottom: 2px solid #bcbec0;
@@ -3160,7 +2763,6 @@ body {
 
 /* MEDIA QUERIES */
 @media (max-width: 1000px) {
-  /* line 61, ../sass/screen.scss */
   #wrapper {
     padding: 0;
   }

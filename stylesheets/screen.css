@@ -211,6 +211,9 @@ nav ul.expand:after {
     width: 48%;
     text-align: center;
   }
+  .collapse .collapse-social i {
+    font-size: 2.2em;
+  }
 
   i {
     font-size: 3em;

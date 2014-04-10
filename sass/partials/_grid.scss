@@ -16,7 +16,13 @@ $Lane: "lane_-_narrowregular", Helvetica, sans-serif;
  	width: 100%;
  	margin: 0 auto;
  	padding: 0;
+ 	text-align: justify;
  }
+
+.js .post {
+	margin-right: 0;
+	display: block;
+}
 
 .post {
  	width: 31.9%;
@@ -26,13 +32,8 @@ $Lane: "lane_-_narrowregular", Helvetica, sans-serif;
  	border-radius: $corner;
  	overflow: hidden;
 	text-align: center;
-	float: left;
-
-	/* No Javascript
-
-	float: left;
-
-	*/
+	position: relative;
+	display: inline-block;
 
  	img {
  		width: 100%;

@@ -126,7 +126,7 @@ nav ul.expand:after {
 
 /* MEDIA QUERIES */
 @media (max-width: 1000px) {
-  header {
+  .header {
     -moz-border-radius-bottomright: 0;
     -webkit-border-bottom-right-radius: 0;
     -moz-border-radius-bottomleft: 0;
@@ -234,6 +234,12 @@ nav ul.expand:after {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  text-align: justify;
+}
+
+.js .post {
+  margin-right: 0;
+  display: block;
 }
 
 .post {
@@ -244,11 +250,8 @@ nav ul.expand:after {
   border-radius: 3px;
   overflow: hidden;
   text-align: center;
-  	/* No Javascript
-  
-  	float: left;
-  
-  	*/
+  position: relative;
+  display: inline-block;
   /* TEXT LINK UNDER COPY OPTION 
    	a {
    		font-family: $Montserrat;
@@ -369,17 +372,23 @@ nav ul.expand:after {
     margin-bottom: 2%;
   }
 }
-.social-widget {
+.js .social-widget {
   position: absolute;
   left: 68%;
-  width: 32%;
-  margin-bottom: 2%;
+  padding-left: 1%;
+  margin-right: 0;
+}
+
+.social-widget {
+  width: 31.9%;
+  float: left;
+  margin-right: 2%;
 }
 .social-widget article {
   width: 100%;
   position: relative;
   top: -1.5em;
-  padding-left: 5%;
+  text-align: left;
 }
 .social-widget article h3 {
   font-family: "lane_-_narrowregular", Helvetica, sans-serif;
@@ -395,11 +404,11 @@ nav ul.expand:after {
   position: relative;
   top: -0.6em;
 }
-.social-widget article img {
-  width: 50px;
-  height: 50px;
+.social-widget article i {
+  color: #414042;
+  font-size: 3em;
   float: left;
-  margin-right: 7%;
+  padding-right: 7%;
   position: relative;
   top: -0.4em;
   -webkit-transition: color 250ms;
@@ -407,12 +416,12 @@ nav ul.expand:after {
   -o-transition: color 250ms;
   transition: color 250ms;
 }
-.social-widget article img:hover {
-  opacity: 0.9;
-  -webkit-transition: opacity 250ms;
-  -moz-transition: opacity 250ms;
-  -o-transition: opacity 250ms;
-  transition: opacity 250ms;
+.social-widget article i:hover {
+  color: #9e760d;
+  -webkit-transition: color 250ms;
+  -moz-transition: color 250ms;
+  -o-transition: color 250ms;
+  transition: color 250ms;
 }
 
 /* MEDIA QUERIES */

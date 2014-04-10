@@ -11,17 +11,23 @@ $Bebas: "bebas_neueregular", Helvetica, sans-serif;
 $Lane: "lane_-_narrowregular", Helvetica, sans-serif;
 
 
-.social-widget {
+.js .social-widget {
 	position:absolute;
 	left: 68%;
-	width: 32%;
- 	margin-bottom: 2%;
+	padding-left: 1%;
+	margin-right: 0;
+}
+
+.social-widget {
+	width: 31.9%;
+	float: left;
+	margin-right: 2%;
 
  	article {
  		width: 100%;
  		position: relative;
 		top: -1.5em;
-		padding-left: 5%;
+		text-align: left;
 
  		h3 {
 		font-family: $Lane;
@@ -39,29 +45,26 @@ $Lane: "lane_-_narrowregular", Helvetica, sans-serif;
 			top: -0.6em;
 		}
 
-		img {
-			width: 50px;
-			height:50px;
-			float: left;
-			margin-right: 7%;
-	 		position: relative;
-			top: -0.4em;
-	 		-webkit-transition: color 250ms;
-		    -moz-transition: color 250ms;
-		    -o-transition: color 250ms;
-		    transition: color 250ms;
-
+		i {
+		  color: #414042;
+		  font-size: 3em;
+		  float: left;
+		  padding-right: 7%;
+		  position: relative;
+		  top: -0.4em;
+		  -webkit-transition: color 250ms;
+		  -moz-transition: color 250ms;
+		  -o-transition: color 250ms;
+		  transition: color 250ms;
 		}
 
-		img:hover {
-			opacity: 0.9;
-			-webkit-transition: opacity 250ms;
-		    -moz-transition: opacity 250ms;
-		    -o-transition: opacity 250ms;
-		    transition: opacity 250ms;
-
+		i:hover {
+		  color: #9e760d;
+		  -webkit-transition: color 250ms;
+		  -moz-transition: color 250ms;
+		  -o-transition: color 250ms;
+		  transition: color 250ms;
 		}
-
  	}
 }
 

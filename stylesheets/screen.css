@@ -276,7 +276,7 @@ nav ul.expand:after {
   width: 100%;
   height: auto;
 }
-.post article {
+.post .post-description {
   display: none;
   position: absolute;
   width: 100%;
@@ -284,7 +284,7 @@ nav ul.expand:after {
   padding: 10px 0;
   text-align: center;
 }
-.post article img {
+.post .post-description img {
   display: none;
 }
 .post h3 {
@@ -350,7 +350,7 @@ nav ul.expand:after {
   opacity: 0;
 }
 
-.post:hover article, .post:hover a {
+.post:hover .post-description, .post:hover a {
   display: block;
 }
 

@@ -40,7 +40,7 @@ $Lane: "lane_-_narrowregular", Helvetica, sans-serif;
  		height: auto;
  	}
 
- 	article {
+ 	.post-description {
  		display: none;
  		position: absolute;
  		width: 100%;
@@ -139,7 +139,7 @@ $Lane: "lane_-_narrowregular", Helvetica, sans-serif;
 	opacity: 0;
 }
 
- .post:hover article, .post:hover a {
+ .post:hover .post-description, .post:hover a {
  	display: block;
  }
 

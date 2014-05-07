@@ -31,7 +31,7 @@ $Bebas: "bebas_neueregular", Helvetica, sans-serif;
     transition: opacity 250ms;
 }
 
-nav {
+.nav {
 	width: 100%;
 	border-bottom: $grey-border;
 	margin-bottom: 50px;
@@ -157,8 +157,13 @@ nav {
 		display: block;
 	}
 
-	nav ul.expand:after {
+	.nav ul.expand:after {
 		display:none;
+	}
+
+	.nav ul {
+		width: 100%;
+		padding-top: 1.5%;
 	}
 
 	.collapse {
@@ -178,6 +183,7 @@ nav {
 
 			ul {
 				padding: 0;
+				width: 85%;
 			}
 
 			li {

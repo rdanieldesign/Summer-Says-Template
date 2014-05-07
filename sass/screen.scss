@@ -28,13 +28,21 @@ $Bebas: "bebas_neueregular", Helvetica, sans-serif;
 $Mensch: "MenschRegular", Helvetica, sans-serif;
 
 
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 body {
 	background-color: #E5E5E5;
 }
 
 #wrapper {
 	width: 100%;
-	max-width: 960px;
+	max-width: 1000px;
 	padding: 0 20px;
 	margin: 0 auto;
 	background-color: $light-grey;

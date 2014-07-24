@@ -38,7 +38,7 @@ $Bebas: "bebas_neueregular", Helvetica, sans-serif;
 	padding:0;
 
 	ul {
-		width: 90%;
+		width: 85%;
 		margin: 0 auto;
 		text-align: justify;
 		padding: 4% 0 1.5% 0;
@@ -171,29 +171,29 @@ $Bebas: "bebas_neueregular", Helvetica, sans-serif;
 	  	width:100%;
 	  	heigth: auto;
 	  	padding: 2% 0;
+	  }
 
-  		.collapse-nav {
+	.collapse-nav {
 		width: 60%;
 		text-align:center;
   		border-right: $grey-border;
 		}
 
-		.collapse-social {
-			width: 38%;
+	.collapse-social {
+		width: 38%;
 
-			ul {
-				padding: 0;
-				width: 85%;
-			}
+		ul {
+			padding: 0;
+			width: 85%;
+		}
 
-			li {
-				width: 48%;
-				text-align:center;
-			}
+		li {
+			width: 48%;
+			text-align:center;
+		}
 
-			i {
-				font-size: 2.2em;
-			}
+		i {
+			font-size: 2.2em;
 		}
 	}
 
@@ -218,13 +218,10 @@ $Bebas: "bebas_neueregular", Helvetica, sans-serif;
 	
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
 
-	.collapse i {
+	.collapse-social i {
+		font-size: 2em;
 	}
-
-	.collapse-nav i {
-	}
-
 }
 

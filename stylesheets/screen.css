@@ -86,7 +86,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 0;
 }
 .nav ul {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   text-align: justify;
   padding: 4% 0 1.5% 0;
@@ -201,23 +201,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     heigth: auto;
     padding: 2% 0;
   }
-  .collapse .collapse-nav {
+
+  .collapse-nav {
     width: 60%;
     text-align: center;
     border-right: 2px solid #bcbec0;
   }
-  .collapse .collapse-social {
+
+  .collapse-social {
     width: 38%;
   }
-  .collapse .collapse-social ul {
+  .collapse-social ul {
     padding: 0;
     width: 85%;
   }
-  .collapse .collapse-social li {
+  .collapse-social li {
     width: 48%;
     text-align: center;
   }
-  .collapse .collapse-social i {
+  .collapse-social i {
     font-size: 2.2em;
   }
 
@@ -236,6 +238,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     -moz-transition: color 250ms;
     -o-transition: color 250ms;
     transition: color 250ms;
+  }
+}
+@media (max-width: 450px) {
+  .collapse-social i {
+    font-size: 2em;
   }
 }
 #content {
@@ -478,6 +485,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   line-height: 1.5em;
   text-align: justify;
   padding-bottom: 2%;
+}
+.post-full em {
+  font-style: italic;
 }
 .post-full a {
   font-family: "muliregular", Helvetica, sans-serif;
@@ -2743,6 +2753,97 @@ table {
   content: "\f21a";
 }
 
+.post-full {
+  width: 100%;
+  display: block;
+}
+.post-full img {
+  width: auto;
+  height: auto;
+  max-height: 500px;
+  display: block;
+  margin: 0 auto;
+  max-width: 96%;
+  border-radius: 3px;
+}
+.post-full div {
+  width: 66%;
+  margin: 0 auto;
+}
+.post-full h3 {
+  font-family: "lane_-_narrowregular", Helvetica, sans-serif;
+  font-size: 2.2em;
+  letter-spacing: 2px;
+  line-height: 1.2em;
+  color: #414042;
+  text-align: center;
+}
+.post-full h5 {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: .8em;
+  color: #808080;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  top: -1em;
+}
+.post-full p {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: 1em;
+  color: #808080;
+  line-height: 1.5em;
+  text-align: justify;
+  padding-bottom: 2%;
+}
+.post-full em {
+  font-style: italic;
+}
+.post-full a {
+  font-family: "muliregular", Helvetica, sans-serif;
+  font-size: 0.75em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 33%;
+  padding: 2% 0;
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  background-color: #414042;
+  -webkit-transition: background-color 250ms;
+  -moz-transition: background-color 250ms;
+  -o-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+.post-full a:hover {
+  background-color: #9e760d;
+  -webkit-transition: background-color 250ms;
+  -moz-transition: background-color 250ms;
+  -o-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+
+.signature {
+  color: #9e760d;
+  width: 100%;
+  display: inline-block;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 740px) {
+  .post-full p {
+    text-align: left;
+  }
+  .post-full div {
+    width: 80%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
